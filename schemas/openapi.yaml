@@ -1,0 +1,525 @@
+#   Copyright 2023-2025 SmartBear
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+openapi: 3.1.0
+
+info:
+  title: ProblemDetailsRegistry
+  version: 1.0.0
+  description: >
+    The EOAP Problem Details Registry acts as a well known location for problem detail types returned by various SmartBear APIs.
+    It acts as a central registry to promote reuse and clarity of problem detail types conforming to [RFC9457](https://www.rfc-editor.org/info/rfc9457) (formerly [RFC7807](https://tools.ietf.org/html/rfc7807)).
+
+  contact:
+    name: EOAP Problem Details Registry
+    url: https://eoap.github.io/problems-registry
+
+  license:
+      name: Apache 2.0
+      url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+components:
+
+  responses:
+
+    BadRequest:
+      description: |
+        The request was malformed or could not be processed. 
+
+        `Bad Request` problem detail responses:
+
+         - [The request is invalid or malformed](https://eoap.github.io/problems-registry/bad-request/)
+         - [Invalid body property format](https://eoap.github.io/problems-registry/invalid-body-property-format/)
+         - [Invalid body property value](https://eoap.github.io/problems-registry/invalid-body-property-value/)
+         - [Invalid Parameters](https://eoap.github.io/problems-registry/invalid-parameters/)
+         - [Invalid request header format](https://eoap.github.io/problems-registry/invalid-request-header-format/)
+         - [Invalid request parameter format](https://eoap.github.io/problems-registry/invalid-request-parameter-format/)
+         - [Invalid request parameter value](https://eoap.github.io/problems-registry/invalid-request-parameter-value/)
+         - [Missing body property](https://eoap.github.io/problems-registry/missing-body-property/)
+         - [Missing request header](https://eoap.github.io/problems-registry/missing-request-header/)
+         - [Missing request parameter](https://eoap.github.io/problems-registry/missing-request-parameter/)
+      content:
+        application/problem+json:
+          schema:
+            oneOf:
+            - $ref: 'schema.yaml#/$defs/BadRequest'
+            - $ref: 'schema.yaml#/$defs/InvalidBodyPropertyFormat'
+            - $ref: 'schema.yaml#/$defs/InvalidBodyPropertyValue'
+            - $ref: 'schema.yaml#/$defs/InvalidParameters'
+            - $ref: 'schema.yaml#/$defs/InvalidRequestHeaderFormat'
+            - $ref: 'schema.yaml#/$defs/InvalidRequestParameterFormat'
+            - $ref: 'schema.yaml#/$defs/InvalidRequestParameterValue'
+            - $ref: 'schema.yaml#/$defs/MissingBodyProperty'
+            - $ref: 'schema.yaml#/$defs/MissingRequestHeader'
+            - $ref: 'schema.yaml#/$defs/MissingRequestParameter'
+          examples:
+            requestInvalidOrMalformed:
+              $ref: '#/components/examples/request_invalid_malformed'
+            missingBodyProperty:
+              $ref: '#/components/examples/missing-body-property'
+            missingBodyPropertyWithErrors:
+              $ref: '#/components/examples/missing-body-property-with-errors'
+            missingRequestParameter:
+              $ref: '#/components/examples/missing-request-parameter'
+            missingRequestParameterWithErrors:
+              $ref: '#/components/examples/missing-request-parameter-with-errors'
+            missingRequestHeader:
+              $ref: '#/components/examples/missing-request-header'
+            missingRequestHeaderWithErrors:
+              $ref: '#/components/examples/missing-request-header-with-errors'
+            invalidBodyPropertyFormat:
+              $ref: '#/components/examples/invalid-body-property-format'
+            invalidBodyPropertyFormatWithErrors:
+              $ref: '#/components/examples/invalid-body-property-format-with-errors'
+            invalidRequestParameterFormat:
+              $ref: '#/components/examples/invalid-request-parameter-format'
+            invalidRequestParameterFormatWithErrors:
+              $ref: '#/components/examples/invalid-request-parameter-format-with-errors'
+            invalidRequestHeaderFormat:
+              $ref: '#/components/examples/invalid-request-header-format'
+            invalidRequestHeaderFormatWithErrors:
+              $ref: '#/components/examples/invalid-request-header-format-with-errors'
+            invalidBodyPropertyValue:
+              $ref: '#/components/examples/invalid-body-property-value'
+            invalidBodyPropertyValueWithErrors:
+              $ref: '#/components/examples/invalid-body-property-value-with-errors'
+            invalidRequestParameterValue:
+              $ref: '#/components/examples/invalid-request-parameter-value'
+            invalidRequestParameterValueWithErrors:
+              $ref: '#/components/examples/invalid-request-parameter-value-with-errors'
+
+    Unauthorized:
+      description: Access token is not set or invalid.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/Unauthorized'
+          examples:
+            unauthorized:
+              $ref: '#/components/examples/unauthorized'
+
+    Forbidden:
+      description: >-
+        The requestor is not authorized to perform this operation on the
+        resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/Forbidden'
+          examples:
+            forbidden:
+              $ref: '#/components/examples/forbidden'
+
+    NotFound:
+      description: The requested resource was not found.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/NotFound'
+          examples:
+            notFound:
+              $ref: '#/components/examples/not-found'
+
+    ResourceAlreadyExists:
+      description: The resource being created is found to already exist on the server.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/AlreadyExists'
+          examples:
+            alreadyExists:
+              $ref: '#/components/examples/resource-already-exists'
+
+    BusinessRuleViolation:
+      description: >-
+        The request is deemed invalid as it fails to meet business rule
+        expectations.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/BusinessRuleViolation'
+          examples:
+            businessRuleViolation:
+              $ref: '#/components/examples/business-rule-violation'
+
+    ValidationError:
+      description: Your client issued a request that failed validation.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/ValidationError'
+          examples:
+            validationError:
+              $ref: '#/components/examples/validation-error'
+
+    ServerError:
+      description: The server encountered an unexpected error
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/ServerError'
+          examples:
+            serverError:
+              $ref: '#/components/examples/server-error'
+
+    ServiceUnavailable:
+      description: The service requested is unavailable
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/ServiceUnavailable'
+          examples:
+            serviceUnavailable:
+              $ref: '#/components/examples/service-unavailable'
+            licenseExpired:
+              $ref: '#/components/examples/license-expired'
+            licenseCancelled:
+              $ref: '#/components/examples/license-cancelled'
+
+  examples:
+
+    request_invalid_malformed:
+      description: >-
+        Representation of a 400 Bad Request response where the server would not
+        process the request due to something the server considered to be a client error.
+      value:
+        type: 'https://eoap.github.io/problems-registry/bad-request'
+        status: 400
+        title: Malformed request syntax
+        detail: Request body could not be read properly.
+        code: 400-01
+
+    missing-body-property:
+      description: >-
+        Representation of a 400 Bad Request response where a rquired `body`
+        property was omitted by the consumer.
+      value:
+        type: 'https://eoap.github.io/problems-registry/missing-body-property'
+        status: 400
+        title: Missing body property
+        detail: The request is missing an expected body property.
+        code: 400-09
+
+    missing-body-property-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where a rquired `body`
+        property was omitted by the consumer.
+      value:
+        type: 'https://eoap.github.io/problems-registry/missing-body-property'
+        status: 400
+        title: Missing body property
+        detail: The request is missing an expected body property.
+        code: 400-09
+        errors:
+          - detail: 'The body property {name} is required.'
+            pointer: /name
+
+    missing-request-parameter:
+      description: >-
+        Representation of a 400 Bad Request response where a `query` or `path`
+        parameter was omitted by the consumer.
+      value:
+        type: 'https://eoap.github.io/problems-registry/missing-request-parameter'
+        status: 400
+        title: Missing request parameter
+        detail: The request is missing an expected query or path parameter.
+        code: 400-03
+
+    missing-request-parameter-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where a `query` or `path`
+        parameter was omitted by the consumer.
+      value:
+        type: 'https://eoap.github.io/problems-registry/missing-request-parameter'
+        status: 400
+        title: Missing request parameter
+        detail: The request is missing an expected query or path parameter.
+        code: 400-03
+        errors:
+          - detail: 'The query parameter {name} is required.'
+            parameter: name
+
+    missing-request-header:
+      description: >-
+        Representation of a 400 Bad Request response where a `header` parameter
+        was omitted by the consumer.
+      value:
+        type: 'https://eoap.github.io/problems-registry/missing-request-header'
+        status: 400
+        title: Missing request header
+        detail: The request is missing an expected HTTP request header.
+        code: 400-02
+
+    missing-request-header-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where a `header` parameter
+        was omitted by the consumer.
+      value:
+        type: 'https://eoap.github.io/problems-registry/missing-request-header'
+        status: 400
+        title: Missing request header
+        detail: The request is missing an expected HTTP request header.
+        code: 400-02
+        errors:
+          - detail: 'The header {Accept} is required'
+            header: Accept
+
+    invalid-body-property-format:
+      description: >-
+        Representation of a 400 Bad Request response where a body property does
+        not leverage the correct format
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-body-property-format'
+        status: 400
+        title: Invalid Body Property Format
+        detail: The request body contains a malformed property.
+        code: 400-04
+
+    invalid-body-property-format-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where a body property does
+        not leverage the correct format
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-body-property-format'
+        status: 400
+        title: Invalid Body Property Format
+        detail: The request body contains a malformed property.
+        code: 400-04
+        errors:
+          - detail: Must be a positive integer
+            pointer: /quantity
+
+    invalid-request-parameter-format:
+      description: >-
+        Representation of a 400 Bad Request response where a query or path
+        parameter is malformed.
+      value:
+        type: >-
+          https://eoap.github.io/problems-registry/invalid-request-parameter-format
+        status: 400
+        title: Invalid Request Parameter Format
+        detail: The request contains a malformed query parameter.
+        code: 400-05
+
+    invalid-request-parameter-format-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where a query or path
+        parameter is malformed.
+      value:
+        type: >-
+          https://eoap.github.io/problems-registry/invalid-request-parameter-format
+        status: 400
+        title: Invalid Request Parameter Format
+        detail: The request contains a malformed query parameter.
+        code: 400-05
+        errors:
+          - detail: The expected string values are ASC or DSC
+            parameter: sort
+
+    invalid-request-header-format:
+      description: >-
+        Representation of a 400 Bad Request response where request header
+        provided was malformed
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-request-header-format'
+        status: 400
+        title: Invalid Request Header Format
+        detail: The request contains a malformed request header parameter.
+        code: 400-06
+
+    invalid-request-header-format-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where a query or path
+        parameter is malformed.
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-request-header-format'
+        status: 400
+        title: Invalid Request Header Format
+        detail: The request contains a malformed request header parameter.
+        code: 400-06
+        errors:
+          - detail: The request header was malformed
+            header: Accept
+
+    invalid-body-property-value:
+      description: >-
+        Representation of a 400 Bad Request response where the request body
+        contains a invalid property value
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-body-property-value'
+        status: 400
+        title: Invalid Body Property Value
+        detail: The request body contains an invalid body property value.
+        code: 400-07
+
+    invalid-body-property-value-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where the request body
+        contains a invalid property value
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-body-property-value'
+        status: 400
+        title: Invalid Body Property Value
+        detail: The request body contains an invalid body property value.
+        code: 400-07
+        errors:
+          - detail: >-
+              A value `Never` is an invalid. Please provide `monthly` or
+              `quarterly`
+            pointer: '#/marketingCommunication/frequency'
+
+    invalid-request-parameter-value:
+      description: >-
+        Representation of a 400 Bad Request response where the request contains
+        a invalid query or path parameter value.
+      value:
+        type: >-
+          https://eoap.github.io/problems-registry/invalid-request-parameter-value
+        status: 400
+        title: Invalid Request Parameter Value
+        detail: The request body contains an invalid request parameter value.
+        code: 400-08
+
+    invalid-request-parameter-value-with-errors:
+      description: >-
+        Representation of a 400 Bad Request response where the request contains
+        a invalid query or path parameter value.
+      value:
+        type: >-
+          https://eoap.github.io/problems-registry/invalid-request-parameter-value
+        status: 400
+        title: Invalid Request Parameter Value
+        detail: The request body contains an invalid request parameter value.
+        code: 400-08
+        errors:
+          - detail: >-
+              The value `top-down` is not a valid sort parameter value. The
+              expected string values are `ASC` or `DSC`
+            parameter: sort
+
+    unauthorized:
+      value:
+        type: 'https://eoap.github.io/problems-registry/unauthorized'
+        title: Unauthorized
+        detail: >-
+          Access token not set or invalid. The requested resource could not be
+          returned
+        status: 401
+
+    forbidden:
+      value:
+        type: 'https://eoap.github.io/problems-registry/forbidden'
+        title: Forbidden
+        detail: The resource could not be returned as the requestor is not authorized
+        status: 403
+
+    not-found:
+      value:
+        type: 'https://eoap.github.io/problems-registry/not-found'
+        title: Not found
+        detail: The requested resource was not found
+        status: 404
+
+    resource-already-exists:
+      description: >-
+        Representation of a 409 Conflict response where a consumer is trying
+        to create a resource that already exists
+      value:
+        type: 'https://eoap.github.io/problems-registry/already-exists'
+        status: 409
+        title: Already exists
+        detail: The resource being created already exists.
+        code: 409-01
+
+    validation-error:
+      description: >
+        This problem occurs when the request is deemed unprocessable.
+
+
+        The client issued a request that failed validation. Certain validation
+        libraries return multi-errors and cannot be easily parsed into discreet
+        types. This problem type, afforded the provider with the ability to
+        surface all validation errors and negate the need for a trial and error
+        workflow on your side.
+      value:
+        type: 'https://eoap.github.io/problems-registry/validation-error'
+        status: 422
+        title: Validation Error
+        detail: The request is invalid.
+        code: 422-02
+        errors:
+          - detail: 'Your request does not contain the required property {name}'
+            pointer: /name
+          - detail: The path parameter does not conform to the expected format
+            header: petId
+
+    business-rule-violation:
+      description: >-
+        Representation of a 422 Bad Request response where the request is deemed
+        invalid as if fails to meet certain business rule expectations.
+      value:
+        type: 'https://eoap.github.io/problems-registry/business-rule-violation'
+        status: 422
+        title: Business Rule Violation
+        detail: The request body is invalid and not meeting business rules.
+        code: 422-01
+        errors:
+          - detail: Maximum quantity allowed in 999
+            pointer: /quantity
+          - detail: We do not offer `next-day` delivery to non-EU addresses
+            pointer: /shippingAddress/country
+          - detail: We do not offer `next-day` delivery to non-EU addresses
+            pointer: /shippingOption
+
+    license-expired:
+      description: >-
+        Representation of a 503 Service Unavailable response when the license
+        associated with the client has expired thus rendering the service
+        unavailable.
+      value:
+        type: 'https://eoap.github.io/problems-registry/license-expired'
+        status: 503
+        title: License Expired
+        detail: >-
+          The service is unavailable as the license associated with your client
+          or organization has expired. Please contact your account manager or
+          representative.
+
+    license-cancelled:
+      description: >-
+        Representation of a 503 Service Unavailable response when the license
+        associated with the client has been cancelled thus rendering the service
+        unavailable.
+      value:
+        type: 'https://eoap.github.io/problems-registry/license-cancelled'
+        status: 503
+        title: License Cancelled
+        detail: >-
+          The service is unavailable as the license associated with your client
+          or organization has been cancelled. Please contact your account
+          manager or representative.
+
+    server-error:
+      value:
+        type: 'https://eoap.github.io/problems-registry/server-error'
+        title: Server Error
+        detail: The server encountered an unexpected error
+        status: 500
+
+    service-unavailable:
+      value:
+        type: 'https://eoap.github.io/problems-registry/service-unavailable'
+        title: Service Unavailable
+        detail: The service is currently unavailable
+        status: 500

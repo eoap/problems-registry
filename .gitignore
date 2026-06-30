@@ -1,0 +1,4 @@
+site/
+.task
+.vscode
+__pycache__

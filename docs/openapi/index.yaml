@@ -1,0 +1,12 @@
+openapi: 3.1.0
+info:
+  title: ProblemDetailsRegistry
+  version: 1.0.0
+  description: |
+    The EOAP Problem Details Registry acts as a well known location for problem detail types returned by various SmartBear APIs. It acts as a central registry to promote reuse and clarity of problem detail types conforming to [RFC9457](https://www.rfc-editor.org/info/rfc9457) (formerly [RFC7807](https://tools.ietf.org/html/rfc7807)).
+  contact:
+    name: EOAP Problem Details Registry
+    url: https://eoap.github.io/problems-registry
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
