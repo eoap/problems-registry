@@ -222,8 +222,8 @@ components:
         detail: The request is missing an expected body property.
         code: 400-09
         errors:
-          - detail: 'The body property {name} is required.'
-            pointer: /name
+        - detail: 'The body property {name} is required.'
+          pointer: /name
 
     missing-request-parameter:
       description: >-
@@ -247,8 +247,8 @@ components:
         detail: The request is missing an expected query or path parameter.
         code: 400-03
         errors:
-          - detail: 'The query parameter {name} is required.'
-            parameter: name
+        - detail: 'The query parameter {name} is required.'
+          parameter: name
 
     missing-request-header:
       description: >-
@@ -272,8 +272,8 @@ components:
         detail: The request is missing an expected HTTP request header.
         code: 400-02
         errors:
-          - detail: 'The header {Accept} is required'
-            header: Accept
+        - detail: 'The header {Accept} is required'
+          header: Accept
 
     invalid-body-property-format:
       description: >-
@@ -297,8 +297,8 @@ components:
         detail: The request body contains a malformed property.
         code: 400-04
         errors:
-          - detail: Must be a positive integer
-            pointer: /quantity
+        - detail: Must be a positive integer
+          pointer: /quantity
 
     invalid-request-parameter-format:
       description: >-
@@ -324,8 +324,8 @@ components:
         detail: The request contains a malformed query parameter.
         code: 400-05
         errors:
-          - detail: The expected string values are ASC or DSC
-            parameter: sort
+        - detail: The expected string values are ASC or DSC
+          parameter: sort
 
     invalid-request-header-format:
       description: >-
@@ -349,8 +349,8 @@ components:
         detail: The request contains a malformed request header parameter.
         code: 400-06
         errors:
-          - detail: The request header was malformed
-            header: Accept
+        - detail: The request header was malformed
+          header: Accept
 
     invalid-body-property-value:
       description: >-
@@ -374,10 +374,10 @@ components:
         detail: The request body contains an invalid body property value.
         code: 400-07
         errors:
-          - detail: >-
-              A value `Never` is an invalid. Please provide `monthly` or
-              `quarterly`
-            pointer: '#/marketingCommunication/frequency'
+        - detail: >-
+            A value `Never` is an invalid. Please provide `monthly` or
+            `quarterly`
+          pointer: '#/marketingCommunication/frequency'
 
     invalid-request-parameter-value:
       description: >-
@@ -403,10 +403,10 @@ components:
         detail: The request body contains an invalid request parameter value.
         code: 400-08
         errors:
-          - detail: >-
-              The value `top-down` is not a valid sort parameter value. The
-              expected string values are `ASC` or `DSC`
-            parameter: sort
+        - detail: >-
+            The value `top-down` is not a valid sort parameter value. The
+            expected string values are `ASC` or `DSC`
+          parameter: sort
 
     unauthorized:
       value:
@@ -459,10 +459,10 @@ components:
         detail: The request is invalid.
         code: 422-02
         errors:
-          - detail: 'Your request does not contain the required property {name}'
-            pointer: /name
-          - detail: The path parameter does not conform to the expected format
-            header: petId
+        - detail: 'Your request does not contain the required property {name}'
+          pointer: /name
+        - detail: The path parameter does not conform to the expected format
+          header: petId
 
     business-rule-violation:
       description: >-
@@ -475,12 +475,12 @@ components:
         detail: The request body is invalid and not meeting business rules.
         code: 422-01
         errors:
-          - detail: Maximum quantity allowed in 999
-            pointer: /quantity
-          - detail: We do not offer `next-day` delivery to non-EU addresses
-            pointer: /shippingAddress/country
-          - detail: We do not offer `next-day` delivery to non-EU addresses
-            pointer: /shippingOption
+        - detail: Maximum quantity allowed in 999
+          pointer: /quantity
+        - detail: We do not offer `next-day` delivery to non-EU addresses
+          pointer: /shippingAddress/country
+        - detail: We do not offer `next-day` delivery to non-EU addresses
+          pointer: /shippingOption
 
     license-expired:
       description: >-
