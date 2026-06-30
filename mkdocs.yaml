@@ -13,7 +13,7 @@
 # limitations under the License.
 
 site_name: Problems Registry
-# site_url: not available
+site_url: https://eoap.github.io/problems-registry/
 site_author: Fabrice Brito, Simone Tripodi
 repo_url: https://github.com/eoap/problems-registry/
 repo_name: eoap/problems-registry
