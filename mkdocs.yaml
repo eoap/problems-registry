@@ -72,26 +72,28 @@ extra_javascript:
 nav:
 - Home: index.md
 - Problems Registry:
-  - already-exists.md
-  - bad-request.md
-  - business-rule-violation.md
-  - forbidden.md
-  - invalid-body-property-format.md
-  - invalid-body-property-value.md
-  - invalid-parameters.md
-  - invalid-request-header-format.md
-  - invalid-request-parameter-format.md
-  - invalid-request-parameter-value.md
-  - license-cancelled.md
-  - license-expired.md
-  - missing-body-property.md
-  - missing-request-header.md
-  - missing-request-parameter.md
-  - not-found.md
-  - server-error.md
-  - service-unavailable.md
-  - unauthorized.md
-  - validation-error.md
+  - EOAP Problem Types:
+    - already-exists.md
+    - business-rule-violation.md
+    - invalid-body-property-format.md
+    - invalid-body-property-value.md
+    - invalid-request-header-format.md
+    - invalid-request-parameter-format.md
+    - invalid-request-parameter-value.md
+    - license-cancelled.md
+    - license-expired.md
+    - missing-body-property.md
+    - missing-request-header.md
+    - missing-request-parameter.md
+    - validation-error.md
+  - Common Problem Types:
+    - bad-request.md
+    - forbidden.md
+    - invalid-parameters.md
+    - not-found.md
+    - service-unavailable.md
+    - server-error.md
+    - unauthorized.md
 - Schemas:
   - JSON Schema: json-schema.md
   - OpenAPI: openapi/index.html

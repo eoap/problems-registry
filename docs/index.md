@@ -26,13 +26,13 @@ The following types can also be leveraged for convenience; however, the recommen
 
 | Problem type | Description |
 |--------------|-------------|
-| [Not Found](not-found.md) | The requested resource could not be found. |
-| [Unauthorized](unauthorized.md) | The client request missed or malformed its credentials. |
-| [Forbidden](forbidden.md) | The request is not authorized for the resource. |
 | [Bad Request](bad-request.md) | The client request is invalid or malformed. |
+| [Forbidden](forbidden.md) | The request is not authorized for the resource. |
 | [Invalid Parameters](invalid-parameters.md) | One or more of the parameters was malformed. |
+| [Not Found](not-found.md) | The requested resource could not be found. |
 | [Service Unavailable](service-unavailable.md) | The requested service is currently unavailable. |
 | [Server Error](server-error.md) | The server encountered an unexpected error. |
+| [Unauthorized](unauthorized.md) | The client request missed or malformed its credentials. |
 
 When necessary, a Problem Detail response *MAY* include additional detail on the problems that have occurred. The additional errors **MUST** be under the `errors` collection, which itself follows the JSON Schema defined in our [GitHub repo](https://github.com/eoap/problems-registry).
 
