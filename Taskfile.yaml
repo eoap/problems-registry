@@ -33,10 +33,11 @@ tasks:
 
   generate_openapi_docs:
     cmds:
-    - task: openapi:generate_docs
+    - task: openapi:bundle
       vars:
+        REMOVE_UNUSED_COMPONENTS: 'false'
         API: './schemas/openapi.yaml'
-        OUTPUT: './docs/openapi/index.html'
+        OUTPUT: './docs/openapi.yaml'
 
   default:
     cmds:
