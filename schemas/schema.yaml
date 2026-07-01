@@ -85,8 +85,6 @@ $defs:
       - `errors` - and array of errors providing contextual information on the root cause of the problem
 
       The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Registry](https://eoap.github.io/problems-registry/).
-    required:
-    - detail
     properties:
       instance:
         type: string

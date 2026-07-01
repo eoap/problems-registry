@@ -41,14 +41,19 @@ tasks:
 
   default:
     cmds:
+    - task: quality:lint
     - task: quality:test
     - task: quality:check
 
   serve_docs:
     desc: "Serve MkDocs site using hatch docs environment"
+    deps:
+    - generate_openapi_docs
     cmds:
     - |
       uv run \
+      --no-cache \
+      --no-project \
       --with mkdocs-material \
       --with mkdocs-mermaid2-plugin \
       mkdocs serve
