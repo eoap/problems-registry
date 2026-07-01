@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><meta name="author" content="Fabrice Brito, Simone Tripodi" /><link rel="canonical" href="https://eoap.github.io/problems-registry/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Problems Registry</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="styles/css/app.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/problems-registry/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".">
+          <img src="imgs/icon-eoap.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#eoap-problem-types">EOAP Problem Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common-problem-types">Common Problem Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python-usage">Python Usage</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Problems Registry</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >EOAP Problem Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="already-exists/">Already Exists</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="business-rule-violation/">Business Rule Violation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="invalid-body-property-format/">Invalid Body Property Format</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="invalid-body-property-value/">Invalid Body Property Value</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="invalid-request-header-format/">Invalid Request Header Format</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="invalid-request-parameter-format/">Invalid Request Parameter Format</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="invalid-request-parameter-value/">Invalid Request Parameter Value</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="license-cancelled/">License Cancelled</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="license-expired/">License Expired</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="missing-body-property/">Missing Body Property</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="missing-request-header/">Missing Request Header</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="missing-request-parameter/">Missing Request Parameter</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="validation-error/">Validation Error</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Common Problem Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="bad-request/">Bad Request</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="forbidden/">Forbidden</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="invalid-parameters/">Invalid Parameters</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="not-found/">Not Found</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="service-unavailable/">Service unavailable</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="server-error/">Server Error</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="unauthorized/">Unauthorized</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Schemas</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="json-schema/">JSON Schema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="openapi.yaml">OpenAPI</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Problems Registry</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/eoap/problems-registry/edit/master/docs/index.md">Edit on eoap/problems-registry</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="eoap-problem-details-registry">EOAP Problem Details Registry</h1>
+<p>This registry acts as a well-known location for problem detail types returned by various EOAP APIs. It acts as a central registry to promote reuse and clarity of problem detail types conforming to <a href="https://www.rfc-editor.org/info/rfc9457">RFC 9457</a>, formerly <a href="https://www.rfc-editor.org/info/rfc7807">RFC 7807</a>.</p>
+<h2 id="eoap-problem-types">EOAP Problem Types</h2>
+<table>
+<thead>
+<tr>
+<th>Problem type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="already-exists/">Already Exists</a></td>
+<td>The request attempted to create a resource that already exists.</td>
+</tr>
+<tr>
+<td><a href="missing-body-property/">Missing Body Property</a></td>
+<td>The request is missing an expected body property.</td>
+</tr>
+<tr>
+<td><a href="missing-request-header/">Missing Request Header</a></td>
+<td>The request lacked an expected header.</td>
+</tr>
+<tr>
+<td><a href="missing-request-parameter/">Missing Request Parameter</a></td>
+<td>The request is missing a query or path parameter.</td>
+</tr>
+<tr>
+<td><a href="invalid-body-property-format/">Invalid Body Property Format</a></td>
+<td>One or more of the body properties was malformed.</td>
+</tr>
+<tr>
+<td><a href="invalid-request-parameter-format/">Invalid Request Parameter Format</a></td>
+<td>One or more of the query or path parameters was malformed.</td>
+</tr>
+<tr>
+<td><a href="invalid-request-header-format/">Invalid Request Header Format</a></td>
+<td>One or more of the request headers was malformed.</td>
+</tr>
+<tr>
+<td><a href="invalid-body-property-value/">Invalid Body Property Value</a></td>
+<td>One or more of the body property values are invalid.</td>
+</tr>
+<tr>
+<td><a href="invalid-request-parameter-value/">Invalid Request Parameter Value</a></td>
+<td>One or more of the query or path parameter values are invalid.</td>
+</tr>
+<tr>
+<td><a href="validation-error/">Validation Error</a></td>
+<td>The request is invalid and deemed unprocessable.</td>
+</tr>
+<tr>
+<td><a href="business-rule-violation/">Business Rule Violation</a></td>
+<td>The request is deemed invalid as it failed business rule checks.</td>
+</tr>
+<tr>
+<td><a href="license-expired/">License Expired</a></td>
+<td>The client license has expired, rendering the service unavailable.</td>
+</tr>
+<tr>
+<td><a href="license-cancelled/">License Cancelled</a></td>
+<td>The client license has been cancelled, rendering the service unavailable.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-problem-types">Common Problem Types</h2>
+<p>The following types can also be leveraged for convenience; however, the recommendation is to utilize the <a href="https://www.iana.org/assignments/http-problem-types/http-problem-types.xhtml">IANA registry</a> for generic/common types.</p>
+<table>
+<thead>
+<tr>
+<th>Problem type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="bad-request/">Bad Request</a></td>
+<td>The client request is invalid or malformed.</td>
+</tr>
+<tr>
+<td><a href="forbidden/">Forbidden</a></td>
+<td>The request is not authorized for the resource.</td>
+</tr>
+<tr>
+<td><a href="invalid-parameters/">Invalid Parameters</a></td>
+<td>One or more of the parameters was malformed.</td>
+</tr>
+<tr>
+<td><a href="not-found/">Not Found</a></td>
+<td>The requested resource could not be found.</td>
+</tr>
+<tr>
+<td><a href="service-unavailable/">Service Unavailable</a></td>
+<td>The requested service is currently unavailable.</td>
+</tr>
+<tr>
+<td><a href="server-error/">Server Error</a></td>
+<td>The server encountered an unexpected error.</td>
+</tr>
+<tr>
+<td><a href="unauthorized/">Unauthorized</a></td>
+<td>The client request missed or malformed its credentials.</td>
+</tr>
+</tbody>
+</table>
+<p>When necessary, a Problem Detail response <em>MAY</em> include additional detail on the problems that have occurred. The additional errors <strong>MUST</strong> be under the <code>errors</code> collection, which itself follows the JSON Schema defined in our <a href="https://github.com/eoap/problems-registry">GitHub repo</a>.</p>
+<h2 id="python-usage">Python Usage</h2>
+<p>Install the package in an environment with Pydantic 2:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1">pip<span class="w"> </span>install<span class="w"> </span>eoap-problems-registry
+</span></code></pre></div>
+<p>Use the generated models to build responses with fixed registry fields and optional extension members:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><span class="kn">import</span><span class="w"> </span><span class="nn">eoap_problems_registry</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">registry</span>
+</span><span id="__span-1-2">
+</span><span id="__span-1-3"><span class="n">problem</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">MissingRequestParameter</span><span class="p">(</span>
+</span><span id="__span-1-4">    <span class="n">instance</span><span class="o">=</span><span class="s2">&quot;https://api.example.test/problems/abc123&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5">    <span class="n">code</span><span class="o">=</span><span class="s2">&quot;400-03&quot;</span><span class="p">,</span>
+</span><span id="__span-1-6">    <span class="n">errors</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-1-7">        <span class="n">registry</span><span class="o">.</span><span class="n">ErrorDetail</span><span class="p">(</span>
+</span><span id="__span-1-8">            <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;The query parameter limit is required.&quot;</span><span class="p">,</span>
+</span><span id="__span-1-9">            <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;limit&quot;</span><span class="p">,</span>
+</span><span id="__span-1-10">        <span class="p">)</span>
+</span><span id="__span-1-11">    <span class="p">],</span>
+</span><span id="__span-1-12">    <span class="n">correlation_id</span><span class="o">=</span><span class="s2">&quot;req-123&quot;</span><span class="p">,</span>
+</span><span id="__span-1-13"><span class="p">)</span>
+</span><span id="__span-1-14">
+</span><span id="__span-1-15"><span class="n">payload</span> <span class="o">=</span> <span class="n">problem</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="n">exclude_none</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The resulting payload includes the registered <code>type</code>, <code>status</code>, <code>title</code>, and <code>detail</code> values:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><span class="p">{</span>
+</span><span id="__span-2-2"><span class="w">  </span><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.example.test/problems/abc123&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;400-03&quot;</span><span class="p">,</span>
+</span><span id="__span-2-4"><span class="w">  </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-5"><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-6"><span class="w">      </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The query parameter limit is required.&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><span class="w">      </span><span class="nt">&quot;parameter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;limit&quot;</span>
+</span><span id="__span-2-8"><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-9"><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-2-10"><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://eoap.github.io/problems-registry/missing-request-parameter&quot;</span><span class="p">,</span>
+</span><span id="__span-2-11"><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span>
+</span><span id="__span-2-12"><span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Missing request parameter&quot;</span><span class="p">,</span>
+</span><span id="__span-2-13"><span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The request is missing an expected query or path parameter.&quot;</span><span class="p">,</span>
+</span><span id="__span-2-14"><span class="w">  </span><span class="nt">&quot;correlation_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;req-123&quot;</span>
+</span><span id="__span-2-15"><span class="p">}</span>
+</span></code></pre></div>
+<p><code>ProblemDetails</code> and <code>ErrorDetail</code> allow additional provider-specific fields, while generated problem classes use Pydantic literal fields to protect the registered <code>type</code>, <code>status</code>, <code>title</code>, and <code>detail</code> values.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="already-exists/" class="btn btn-neutral float-right" title="Already Exists">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache%20License%202.0-blue"" alt="Apache License, Version 2.0" /></a></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/eoap/problems-registry/" class="fa fa-code-fork" style="color: #fcfcfc"> eoap/problems-registry</a>
+        </span>
+    
+    
+    
+      <span><a href="already-exists/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="javascripts/config.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-07-01 14:00:56.774318+00:00
+-->
