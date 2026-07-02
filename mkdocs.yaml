@@ -80,6 +80,7 @@ nav:
     - invalid-request-header-format.md
     - invalid-request-parameter-format.md
     - invalid-request-parameter-value.md
+    - invalid-state-transition.md
     - license-cancelled.md
     - license-expired.md
     - missing-body-property.md
