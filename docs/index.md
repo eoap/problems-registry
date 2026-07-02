@@ -15,6 +15,7 @@ This registry acts as a well-known location for problem detail types returned by
 | [Invalid Request Header Format](invalid-request-header-format.md) | One or more of the request headers was malformed. |
 | [Invalid Body Property Value](invalid-body-property-value.md) | One or more of the body property values are invalid. |
 | [Invalid Request Parameter Value](invalid-request-parameter-value.md) | One or more of the query or path parameter values are invalid. |
+| [Invalid State Transition](invalid-state-transition.md) | The requested transition is not valid for the current item status. |
 | [Validation Error](validation-error.md) | The request is invalid and deemed unprocessable. |
 | [Business Rule Violation](business-rule-violation.md) | The request is deemed invalid as it failed business rule checks. |
 | [License Expired](license-expired.md) | The client license has expired, rendering the service unavailable. |

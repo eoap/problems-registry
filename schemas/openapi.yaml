@@ -153,6 +153,17 @@ components:
             businessRuleViolation:
               $ref: '#/components/examples/business-rule-violation'
 
+    InvalidStateTransition:
+      description: >-
+        The requested transition is not valid for the current item status.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidStateTransition'
+          examples:
+            businessRuleViolation:
+              $ref: '#/components/examples/invalid-state-transition'
+
     ValidationError:
       description: Your client issued a request that failed validation.
       content:
@@ -481,6 +492,22 @@ components:
           pointer: /shippingAddress/country
         - detail: We do not offer `next-day` delivery to non-EU addresses
           pointer: /shippingOption
+
+    invalid-state-transition:
+      description: >-
+        Representation of a 422 Bad Request response where the requested
+        transition is not valid for the current item status.
+      value:
+        type: 'https://eoap.github.io/problems-registry/invalid-state-transition'
+        status: 422
+        title: Invalid State Transition
+        detail: The requested transition is not valid for the current item status.
+        code: 422-01
+        instance: 'https://stac.dataspace.copernicus.eu/v1/collections/ccm-optical/items/PH1B_PHR_MS___3_20241115T141727_20241115T141750_TOU_000324_e7a7_COG'
+        errors:
+        - detail: |
+            Item `PH1B_PHR_MS___3_20241115T141727_20241115T141750_TOU_000324_e7a7_COG` cannot transition from `orderable` to `failed`.
+          pointer: /properties/order:status
 
     license-expired:
       description: >-

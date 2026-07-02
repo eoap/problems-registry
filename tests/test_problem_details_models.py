@@ -30,6 +30,7 @@ PROBLEM_MODEL_NAMES = {
     "InvalidRequestHeaderFormat",
     "InvalidRequestParameterFormat",
     "InvalidRequestParameterValue",
+    "InvalidStateTransition",
     "LicenseCancelled",
     "LicenseExpired",
     "MissingBodyProperty",

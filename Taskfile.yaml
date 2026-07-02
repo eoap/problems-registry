@@ -1,4 +1,4 @@
-# Copyright 2026 Terradue
+# Copyright 2026 EOAP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,14 +41,21 @@ tasks:
 
   default:
     cmds:
+    - task: process_schema
+    - task: generate_openapi_docs
+    - task: quality:lint
     - task: quality:test
     - task: quality:check
 
   serve_docs:
     desc: "Serve MkDocs site using hatch docs environment"
+    deps:
+    - generate_openapi_docs
     cmds:
     - |
       uv run \
+      --no-cache \
+      --no-project \
       --with mkdocs-material \
       --with mkdocs-mermaid2-plugin \
       mkdocs serve
