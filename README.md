@@ -1,5 +1,8 @@
 # EOAP Problems Registry
 
+[![PyPI - Version](https://img.shields.io/pypi/v/eoap-problems-registry.svg)](https://pypi.org/project/eoap-problems-registry)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/eoap-problems-registry.svg)](https://pypi.org/project/eoap-problems-registry)
+
 [EOAP Problems Registry](https://eoap.github.io/problems-registry/) is a shared registry of API problem detail types for EOAP services. The problem responses conform to [RFC 9457](https://www.rfc-editor.org/info/rfc9457), formerly [RFC 7807](https://www.rfc-editor.org/info/rfc7807), and are published as documentation, JSON Schema/OpenAPI artifacts, and a Python package with generated Pydantic models.
 
 The registry is intended to give API providers and consumers a common vocabulary for reusable `application/problem+json` responses.
@@ -159,4 +162,4 @@ The docs workflow publishes the MkDocs site to GitHub Pages when documentation-r
 
 ## License
 
-This project is licensed under the [Apache License 2.0](LICENSE).
+[![Apache License, Version 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
