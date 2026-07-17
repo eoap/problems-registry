@@ -31,7 +31,7 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/eoap/problems-registry#readme"
+Documentation = "https://eoap.github.io/problems-registry/"
 Issues = "https://github.com/eoap/problems-registry/issues"
 Source = "https://github.com/eoap/problems-registry"
 
