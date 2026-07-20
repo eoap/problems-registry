@@ -99,6 +99,96 @@ components:
             invalidRequestParameterValueWithErrors:
               $ref: '#/components/examples/invalid-request-parameter-value-with-errors'
 
+    InvalidBodyPropertyFormat:
+      description: One or more of the body properties was malformed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidBodyPropertyFormat'
+          examples:
+            invalidBodyPropertyFormat:
+              $ref: '#/components/examples/invalid-body-property-format-with-errors'
+
+    InvalidBodyPropertyValue:
+      description: One or more of the body property values are invalid.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidBodyPropertyValue'
+          examples:
+            invalidBodyPropertyValue:
+              $ref: '#/components/examples/invalid-body-property-value-with-errors'
+
+    InvalidParameters:
+      description: One or more of the parameters was malformed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidParameters'
+          examples:
+            invalidBodyPropertyValue:
+              $ref: '#/components/examples/invalid-body-property-value-with-errors'
+
+    InvalidRequestHeaderFormat:
+      description: One or more of the request headers was malformed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidRequestHeaderFormat'
+          examples:
+            invalidRequestHeaderFormat:
+              $ref: '#/components/examples/invalid-request-header-format-with-errors'
+
+    InvalidRequestParameterFormat:
+      description: One or more of the query or path parameters was malformed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidRequestParameterFormat'
+          examples:
+            invalidRequestParameterFormat:
+              $ref: '#/components/examples/invalid-request-parameter-format-with-errors'
+
+    InvalidRequestParameterValue:
+      description: One or more of the query or path parameter values are invalid.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InvalidRequestParameterValue'
+          examples:
+            invalidRequestParameterValue:
+              $ref: '#/components/examples/invalid-request-parameter-value-with-errors'
+
+    MissingBodyProperty:
+      description: The request is missing an expected body property.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/MissingBodyProperty'
+          examples:
+            missingBodyProperty:
+              $ref: '#/components/examples/missing-body-property-with-errors'
+
+    MissingRequestHeader:
+      description: The request lacked an expected header.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/MissingRequestHeader'
+          examples:
+            missingRequestHeaderWithErrors:
+              $ref: '#/components/examples/missing-request-header-with-errors'
+
+    MissingRequestParameter:
+      description: The request is missing a query or path parameter..
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/MissingRequestParameter'
+          examples:
+            missingRequestParameterWithErrors:
+              $ref: '#/components/examples/missing-request-parameter-with-errors'
+
     Unauthorized:
       description: Access token is not set or invalid.
       content:
