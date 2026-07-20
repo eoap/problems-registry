@@ -19,11 +19,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+[1.0.1] - 2026-07-20
+
+### Fixed
+
+- Generated models solve Pydantic/Pylance [issue](https://github.com/pydantic/pydantic/discussions/7379)
+
 [1.0.0] - 2026-07-17
 
 ### Added
 
 - Initial version
 
-[Unreleased]: https://github.com/eoap/problems-registry/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/eoap/problems-registry/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/eoap/problems-registry/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/eoap/problems-registry/releases/tag/v1.0.0
