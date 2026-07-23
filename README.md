@@ -43,6 +43,7 @@ Common convenience problem types:
 | Bad Request | 400 |
 | Unauthorized | 401 |
 | Forbidden | 403 |
+| Gone | 410 |
 | Not Found | 404 |
 | Invalid Parameters | 400 |
 | Server Error | 500 |

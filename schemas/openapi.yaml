@@ -211,6 +211,18 @@ components:
             forbidden:
               $ref: '#/components/examples/forbidden'
 
+    Gone:
+      description: >-
+        The requested resource is no longer available and the condition is
+        likely to be permanent.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/Gone'
+          examples:
+            gone:
+              $ref: '#/components/examples/gone'
+
     NotFound:
       description: The requested resource was not found.
       content:
@@ -524,6 +536,18 @@ components:
         title: Forbidden
         detail: The resource could not be returned as the requestor is not authorized
         status: 403
+
+    gone:
+      description: >-
+        Representation of a 410 Gone response for a resource that has been
+        permanently removed.
+      value:
+        type: 'https://eoap.github.io/problems-registry/gone'
+        title: Gone
+        detail: >-
+          The requested resource is no longer available and is unlikely to be
+          available again.
+        status: 410
 
     not-found:
       value:

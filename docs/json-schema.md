@@ -37,118 +37,125 @@
     - [4.2.2. Property `EOAP Problem Details Registry > anyOf > item 3 > allOf > item 1 > status`](#anyOf_i3_allOf_i1_status)
     - [4.2.3. Property `EOAP Problem Details Registry > anyOf > item 3 > allOf > item 1 > title`](#anyOf_i3_allOf_i1_title)
     - [4.2.4. Property `EOAP Problem Details Registry > anyOf > item 3 > allOf > item 1 > detail`](#anyOf_i3_allOf_i1_detail)
-- [5. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyFormat`](#anyOf_i4)
+- [5. Property `EOAP Problem Details Registry > anyOf > Gone`](#anyOf_i4)
   - [5.1. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > ProblemDetails`](#anyOf_i4_allOf_i0)
   - [5.2. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1`](#anyOf_i4_allOf_i1)
     - [5.2.1. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > type`](#anyOf_i4_allOf_i1_type)
     - [5.2.2. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > status`](#anyOf_i4_allOf_i1_status)
     - [5.2.3. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > title`](#anyOf_i4_allOf_i1_title)
     - [5.2.4. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > detail`](#anyOf_i4_allOf_i1_detail)
-- [6. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyValue`](#anyOf_i5)
+- [6. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyFormat`](#anyOf_i5)
   - [6.1. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > ProblemDetails`](#anyOf_i5_allOf_i0)
   - [6.2. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1`](#anyOf_i5_allOf_i1)
     - [6.2.1. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1 > type`](#anyOf_i5_allOf_i1_type)
     - [6.2.2. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1 > status`](#anyOf_i5_allOf_i1_status)
     - [6.2.3. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1 > title`](#anyOf_i5_allOf_i1_title)
     - [6.2.4. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1 > detail`](#anyOf_i5_allOf_i1_detail)
-- [7. Property `EOAP Problem Details Registry > anyOf > InvalidParameters`](#anyOf_i6)
+- [7. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyValue`](#anyOf_i6)
   - [7.1. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > ProblemDetails`](#anyOf_i6_allOf_i0)
   - [7.2. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1`](#anyOf_i6_allOf_i1)
     - [7.2.1. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1 > type`](#anyOf_i6_allOf_i1_type)
     - [7.2.2. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1 > status`](#anyOf_i6_allOf_i1_status)
     - [7.2.3. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1 > title`](#anyOf_i6_allOf_i1_title)
     - [7.2.4. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1 > detail`](#anyOf_i6_allOf_i1_detail)
-- [8. Property `EOAP Problem Details Registry > anyOf > InvalidRequestHeaderFormat`](#anyOf_i7)
+- [8. Property `EOAP Problem Details Registry > anyOf > InvalidParameters`](#anyOf_i7)
   - [8.1. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > ProblemDetails`](#anyOf_i7_allOf_i0)
   - [8.2. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1`](#anyOf_i7_allOf_i1)
     - [8.2.1. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1 > type`](#anyOf_i7_allOf_i1_type)
     - [8.2.2. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1 > status`](#anyOf_i7_allOf_i1_status)
     - [8.2.3. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1 > title`](#anyOf_i7_allOf_i1_title)
     - [8.2.4. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1 > detail`](#anyOf_i7_allOf_i1_detail)
-- [9. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterFormat`](#anyOf_i8)
+- [9. Property `EOAP Problem Details Registry > anyOf > InvalidRequestHeaderFormat`](#anyOf_i8)
   - [9.1. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > ProblemDetails`](#anyOf_i8_allOf_i0)
   - [9.2. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1`](#anyOf_i8_allOf_i1)
     - [9.2.1. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1 > type`](#anyOf_i8_allOf_i1_type)
     - [9.2.2. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1 > status`](#anyOf_i8_allOf_i1_status)
     - [9.2.3. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1 > title`](#anyOf_i8_allOf_i1_title)
     - [9.2.4. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1 > detail`](#anyOf_i8_allOf_i1_detail)
-- [10. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterValue`](#anyOf_i9)
+- [10. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterFormat`](#anyOf_i9)
   - [10.1. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > ProblemDetails`](#anyOf_i9_allOf_i0)
   - [10.2. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1`](#anyOf_i9_allOf_i1)
     - [10.2.1. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1 > type`](#anyOf_i9_allOf_i1_type)
     - [10.2.2. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1 > status`](#anyOf_i9_allOf_i1_status)
     - [10.2.3. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1 > title`](#anyOf_i9_allOf_i1_title)
     - [10.2.4. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1 > detail`](#anyOf_i9_allOf_i1_detail)
-- [11. Property `EOAP Problem Details Registry > anyOf > LicenseCancelled`](#anyOf_i10)
+- [11. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterValue`](#anyOf_i10)
   - [11.1. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > ProblemDetails`](#anyOf_i10_allOf_i0)
   - [11.2. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1`](#anyOf_i10_allOf_i1)
     - [11.2.1. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > type`](#anyOf_i10_allOf_i1_type)
     - [11.2.2. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > status`](#anyOf_i10_allOf_i1_status)
     - [11.2.3. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > title`](#anyOf_i10_allOf_i1_title)
     - [11.2.4. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > detail`](#anyOf_i10_allOf_i1_detail)
-- [12. Property `EOAP Problem Details Registry > anyOf > LicenseExpired`](#anyOf_i11)
+- [12. Property `EOAP Problem Details Registry > anyOf > LicenseCancelled`](#anyOf_i11)
   - [12.1. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > ProblemDetails`](#anyOf_i11_allOf_i0)
   - [12.2. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1`](#anyOf_i11_allOf_i1)
     - [12.2.1. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1 > type`](#anyOf_i11_allOf_i1_type)
     - [12.2.2. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1 > status`](#anyOf_i11_allOf_i1_status)
     - [12.2.3. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1 > title`](#anyOf_i11_allOf_i1_title)
     - [12.2.4. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1 > detail`](#anyOf_i11_allOf_i1_detail)
-- [13. Property `EOAP Problem Details Registry > anyOf > MissingBodyProperty`](#anyOf_i12)
+- [13. Property `EOAP Problem Details Registry > anyOf > LicenseExpired`](#anyOf_i12)
   - [13.1. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > ProblemDetails`](#anyOf_i12_allOf_i0)
   - [13.2. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1`](#anyOf_i12_allOf_i1)
     - [13.2.1. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > type`](#anyOf_i12_allOf_i1_type)
     - [13.2.2. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > status`](#anyOf_i12_allOf_i1_status)
     - [13.2.3. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > title`](#anyOf_i12_allOf_i1_title)
     - [13.2.4. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > detail`](#anyOf_i12_allOf_i1_detail)
-- [14. Property `EOAP Problem Details Registry > anyOf > MissingRequestHeader`](#anyOf_i13)
+- [14. Property `EOAP Problem Details Registry > anyOf > MissingBodyProperty`](#anyOf_i13)
   - [14.1. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > ProblemDetails`](#anyOf_i13_allOf_i0)
   - [14.2. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1`](#anyOf_i13_allOf_i1)
     - [14.2.1. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1 > type`](#anyOf_i13_allOf_i1_type)
     - [14.2.2. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1 > status`](#anyOf_i13_allOf_i1_status)
     - [14.2.3. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1 > title`](#anyOf_i13_allOf_i1_title)
     - [14.2.4. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1 > detail`](#anyOf_i13_allOf_i1_detail)
-- [15. Property `EOAP Problem Details Registry > anyOf > MissingRequestParameter`](#anyOf_i14)
+- [15. Property `EOAP Problem Details Registry > anyOf > MissingRequestHeader`](#anyOf_i14)
   - [15.1. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > ProblemDetails`](#anyOf_i14_allOf_i0)
   - [15.2. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1`](#anyOf_i14_allOf_i1)
     - [15.2.1. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1 > type`](#anyOf_i14_allOf_i1_type)
     - [15.2.2. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1 > status`](#anyOf_i14_allOf_i1_status)
     - [15.2.3. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1 > title`](#anyOf_i14_allOf_i1_title)
     - [15.2.4. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1 > detail`](#anyOf_i14_allOf_i1_detail)
-- [16. Property `EOAP Problem Details Registry > anyOf > NotFound`](#anyOf_i15)
+- [16. Property `EOAP Problem Details Registry > anyOf > MissingRequestParameter`](#anyOf_i15)
   - [16.1. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > ProblemDetails`](#anyOf_i15_allOf_i0)
   - [16.2. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1`](#anyOf_i15_allOf_i1)
     - [16.2.1. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > type`](#anyOf_i15_allOf_i1_type)
     - [16.2.2. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > status`](#anyOf_i15_allOf_i1_status)
     - [16.2.3. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > title`](#anyOf_i15_allOf_i1_title)
     - [16.2.4. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > detail`](#anyOf_i15_allOf_i1_detail)
-- [17. Property `EOAP Problem Details Registry > anyOf > ServerError`](#anyOf_i16)
+- [17. Property `EOAP Problem Details Registry > anyOf > NotFound`](#anyOf_i16)
   - [17.1. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > ProblemDetails`](#anyOf_i16_allOf_i0)
   - [17.2. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1`](#anyOf_i16_allOf_i1)
     - [17.2.1. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > type`](#anyOf_i16_allOf_i1_type)
     - [17.2.2. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > status`](#anyOf_i16_allOf_i1_status)
     - [17.2.3. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > title`](#anyOf_i16_allOf_i1_title)
     - [17.2.4. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > detail`](#anyOf_i16_allOf_i1_detail)
-- [18. Property `EOAP Problem Details Registry > anyOf > ServiceUnavailable`](#anyOf_i17)
+- [18. Property `EOAP Problem Details Registry > anyOf > ServerError`](#anyOf_i17)
   - [18.1. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > ProblemDetails`](#anyOf_i17_allOf_i0)
   - [18.2. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1`](#anyOf_i17_allOf_i1)
     - [18.2.1. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > type`](#anyOf_i17_allOf_i1_type)
     - [18.2.2. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > status`](#anyOf_i17_allOf_i1_status)
     - [18.2.3. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > title`](#anyOf_i17_allOf_i1_title)
     - [18.2.4. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > detail`](#anyOf_i17_allOf_i1_detail)
-- [19. Property `EOAP Problem Details Registry > anyOf > Unauthorized`](#anyOf_i18)
+- [19. Property `EOAP Problem Details Registry > anyOf > ServiceUnavailable`](#anyOf_i18)
   - [19.1. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > ProblemDetails`](#anyOf_i18_allOf_i0)
   - [19.2. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1`](#anyOf_i18_allOf_i1)
     - [19.2.1. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > type`](#anyOf_i18_allOf_i1_type)
     - [19.2.2. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > status`](#anyOf_i18_allOf_i1_status)
     - [19.2.3. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > title`](#anyOf_i18_allOf_i1_title)
     - [19.2.4. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > detail`](#anyOf_i18_allOf_i1_detail)
-- [20. Property `EOAP Problem Details Registry > anyOf > ValidationError`](#anyOf_i19)
+- [20. Property `EOAP Problem Details Registry > anyOf > Unauthorized`](#anyOf_i19)
   - [20.1. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > ProblemDetails`](#anyOf_i19_allOf_i0)
   - [20.2. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1`](#anyOf_i19_allOf_i1)
     - [20.2.1. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > type`](#anyOf_i19_allOf_i1_type)
     - [20.2.2. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > status`](#anyOf_i19_allOf_i1_status)
     - [20.2.3. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > title`](#anyOf_i19_allOf_i1_title)
     - [20.2.4. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > detail`](#anyOf_i19_allOf_i1_detail)
+- [21. Property `EOAP Problem Details Registry > anyOf > ValidationError`](#anyOf_i20)
+  - [21.1. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > ProblemDetails`](#anyOf_i20_allOf_i0)
+  - [21.2. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1`](#anyOf_i20_allOf_i1)
+    - [21.2.1. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > type`](#anyOf_i20_allOf_i1_type)
+    - [21.2.2. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > status`](#anyOf_i20_allOf_i1_status)
+    - [21.2.3. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > title`](#anyOf_i20_allOf_i1_title)
+    - [21.2.4. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > detail`](#anyOf_i20_allOf_i1_detail)
 
 **Title:** EOAP Problem Details Registry
 
@@ -164,22 +171,23 @@
 | [BadRequest](#anyOf_i1)                    |
 | [BusinessRuleViolation](#anyOf_i2)         |
 | [Forbidden](#anyOf_i3)                     |
-| [InvalidBodyPropertyFormat](#anyOf_i4)     |
-| [InvalidBodyPropertyValue](#anyOf_i5)      |
-| [InvalidParameters](#anyOf_i6)             |
-| [InvalidRequestHeaderFormat](#anyOf_i7)    |
-| [InvalidRequestParameterFormat](#anyOf_i8) |
-| [InvalidRequestParameterValue](#anyOf_i9)  |
-| [LicenseCancelled](#anyOf_i10)             |
-| [LicenseExpired](#anyOf_i11)               |
-| [MissingBodyProperty](#anyOf_i12)          |
-| [MissingRequestHeader](#anyOf_i13)         |
-| [MissingRequestParameter](#anyOf_i14)      |
-| [NotFound](#anyOf_i15)                     |
-| [ServerError](#anyOf_i16)                  |
-| [ServiceUnavailable](#anyOf_i17)           |
-| [Unauthorized](#anyOf_i18)                 |
-| [ValidationError](#anyOf_i19)              |
+| [Gone](#anyOf_i4)                          |
+| [InvalidBodyPropertyFormat](#anyOf_i5)     |
+| [InvalidBodyPropertyValue](#anyOf_i6)      |
+| [InvalidParameters](#anyOf_i7)             |
+| [InvalidRequestHeaderFormat](#anyOf_i8)    |
+| [InvalidRequestParameterFormat](#anyOf_i9) |
+| [InvalidRequestParameterValue](#anyOf_i10) |
+| [LicenseCancelled](#anyOf_i11)             |
+| [LicenseExpired](#anyOf_i12)               |
+| [MissingBodyProperty](#anyOf_i13)          |
+| [MissingRequestHeader](#anyOf_i14)         |
+| [MissingRequestParameter](#anyOf_i15)      |
+| [NotFound](#anyOf_i16)                     |
+| [ServerError](#anyOf_i17)                  |
+| [ServiceUnavailable](#anyOf_i18)           |
+| [Unauthorized](#anyOf_i19)                 |
+| [ValidationError](#anyOf_i20)              |
 
 ## <a name="anyOf_i0"></a>1. Property `EOAP Problem Details Registry > anyOf > AlreadyExists`
 
@@ -682,14 +690,14 @@ Specific value: `"Forbidden"`
 
 Specific value: `"The resource could not be returned as the requestor is not authorized."`
 
-## <a name="anyOf_i4"></a>5. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyFormat`
+## <a name="anyOf_i4"></a>5. Property `EOAP Problem Details Registry > anyOf > Gone`
 
-|                           |                                   |
-| ------------------------- | --------------------------------- |
-| **Type**                  | `combining`                       |
-| **Required**              | No                                |
-| **Additional properties** | Any type allowed                  |
-| **Defined in**            | #/$defs/InvalidBodyPropertyFormat |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `combining`      |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+| **Defined in**            | #/$defs/Gone     |
 
 | All of(Requirement)                  |
 | ------------------------------------ |
@@ -717,8 +725,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request body contain a malformed property.
-Your client issued a request that contained a malformed body property. Please review your request and compare against the shared API definition.
+**Description:** This problem occurs when the target resource is no longer available at the origin server and the condition is likely to be permanent.
+Your client application should not repeat the request and should remove or replace references to the resource.
 
 | Property                               | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | -------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -737,7 +745,7 @@ Your client issued a request that contained a malformed body property. Please re
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/invalid-body-property-format"`
+Specific value: `"https://eoap.github.io/problems-registry/gone"`
 
 #### <a name="anyOf_i4_allOf_i1_status"></a>5.2.2. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > status`
 
@@ -749,7 +757,7 @@ Specific value: `"https://eoap.github.io/problems-registry/invalid-body-property
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `400`
+Specific value: `410`
 
 #### <a name="anyOf_i4_allOf_i1_title"></a>5.2.3. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > title`
 
@@ -760,7 +768,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Invalid Body Property Format"`
+Specific value: `"Gone"`
 
 #### <a name="anyOf_i4_allOf_i1_detail"></a>5.2.4. Property `EOAP Problem Details Registry > anyOf > item 4 > allOf > item 1 > detail`
 
@@ -771,16 +779,16 @@ Specific value: `"Invalid Body Property Format"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request body contains a malformed property."`
+Specific value: `"The requested resource is no longer available and is unlikely to be available again."`
 
-## <a name="anyOf_i5"></a>6. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyValue`
+## <a name="anyOf_i5"></a>6. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyFormat`
 
-|                           |                                  |
-| ------------------------- | -------------------------------- |
-| **Type**                  | `combining`                      |
-| **Required**              | No                               |
-| **Additional properties** | Any type allowed                 |
-| **Defined in**            | #/$defs/InvalidBodyPropertyValue |
+|                           |                                   |
+| ------------------------- | --------------------------------- |
+| **Type**                  | `combining`                       |
+| **Required**              | No                                |
+| **Additional properties** | Any type allowed                  |
+| **Defined in**            | #/$defs/InvalidBodyPropertyFormat |
 
 | All of(Requirement)                  |
 | ------------------------------------ |
@@ -808,8 +816,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request body contains a invalid property value.
-Your client issued a request that contained an invalid body property value. Please review your request and compare against the shared API definition where applicable.
+**Description:** This problem occurs when the request body contain a malformed property.
+Your client issued a request that contained a malformed body property. Please review your request and compare against the shared API definition.
 
 | Property                               | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | -------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -828,7 +836,7 @@ Your client issued a request that contained an invalid body property value. Plea
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/invalid-body-property-value"`
+Specific value: `"https://eoap.github.io/problems-registry/invalid-body-property-format"`
 
 #### <a name="anyOf_i5_allOf_i1_status"></a>6.2.2. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1 > status`
 
@@ -851,7 +859,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Invalid Body Property Value"`
+Specific value: `"Invalid Body Property Format"`
 
 #### <a name="anyOf_i5_allOf_i1_detail"></a>6.2.4. Property `EOAP Problem Details Registry > anyOf > item 5 > allOf > item 1 > detail`
 
@@ -862,16 +870,16 @@ Specific value: `"Invalid Body Property Value"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request body contains an invalid body property value."`
+Specific value: `"The request body contains a malformed property."`
 
-## <a name="anyOf_i6"></a>7. Property `EOAP Problem Details Registry > anyOf > InvalidParameters`
+## <a name="anyOf_i6"></a>7. Property `EOAP Problem Details Registry > anyOf > InvalidBodyPropertyValue`
 
-|                           |                           |
-| ------------------------- | ------------------------- |
-| **Type**                  | `combining`               |
-| **Required**              | No                        |
-| **Additional properties** | Any type allowed          |
-| **Defined in**            | #/$defs/InvalidParameters |
+|                           |                                  |
+| ------------------------- | -------------------------------- |
+| **Type**                  | `combining`                      |
+| **Required**              | No                               |
+| **Additional properties** | Any type allowed                 |
+| **Defined in**            | #/$defs/InvalidBodyPropertyValue |
 
 | All of(Requirement)                  |
 | ------------------------------------ |
@@ -899,8 +907,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when a client request contains invalid or malformed parameters causing the server to reject the request.
-Your client application issued a request to an API that contains invalid or malformed parameters.
+**Description:** This problem occurs when the request body contains a invalid property value.
+Your client issued a request that contained an invalid body property value. Please review your request and compare against the shared API definition where applicable.
 
 | Property                               | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | -------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -919,7 +927,7 @@ Your client application issued a request to an API that contains invalid or malf
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/invalid-parameters"`
+Specific value: `"https://eoap.github.io/problems-registry/invalid-body-property-value"`
 
 #### <a name="anyOf_i6_allOf_i1_status"></a>7.2.2. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1 > status`
 
@@ -942,7 +950,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Invalid parameters"`
+Specific value: `"Invalid Body Property Value"`
 
 #### <a name="anyOf_i6_allOf_i1_detail"></a>7.2.4. Property `EOAP Problem Details Registry > anyOf > item 6 > allOf > item 1 > detail`
 
@@ -953,16 +961,16 @@ Specific value: `"Invalid parameters"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request contained invalid, or malformed parameters (path or header or query)."`
+Specific value: `"The request body contains an invalid body property value."`
 
-## <a name="anyOf_i7"></a>8. Property `EOAP Problem Details Registry > anyOf > InvalidRequestHeaderFormat`
+## <a name="anyOf_i7"></a>8. Property `EOAP Problem Details Registry > anyOf > InvalidParameters`
 
-|                           |                                    |
-| ------------------------- | ---------------------------------- |
-| **Type**                  | `combining`                        |
-| **Required**              | No                                 |
-| **Additional properties** | Any type allowed                   |
-| **Defined in**            | #/$defs/InvalidRequestHeaderFormat |
+|                           |                           |
+| ------------------------- | ------------------------- |
+| **Type**                  | `combining`               |
+| **Required**              | No                        |
+| **Additional properties** | Any type allowed          |
+| **Defined in**            | #/$defs/InvalidParameters |
 
 | All of(Requirement)                  |
 | ------------------------------------ |
@@ -990,8 +998,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request contains a malformed request header.
-Your client issued a request that contained a malformed request header. Please review your request parameters and compare against the shared API definition when applicable.
+**Description:** This problem occurs when a client request contains invalid or malformed parameters causing the server to reject the request.
+Your client application issued a request to an API that contains invalid or malformed parameters.
 
 | Property                               | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | -------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1010,7 +1018,7 @@ Your client issued a request that contained a malformed request header. Please r
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/invalid-request-header-format"`
+Specific value: `"https://eoap.github.io/problems-registry/invalid-parameters"`
 
 #### <a name="anyOf_i7_allOf_i1_status"></a>8.2.2. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1 > status`
 
@@ -1033,7 +1041,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Invalid Request Header Format"`
+Specific value: `"Invalid parameters"`
 
 #### <a name="anyOf_i7_allOf_i1_detail"></a>8.2.4. Property `EOAP Problem Details Registry > anyOf > item 7 > allOf > item 1 > detail`
 
@@ -1044,16 +1052,16 @@ Specific value: `"Invalid Request Header Format"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request contains a malformed request header parameter."`
+Specific value: `"The request contained invalid, or malformed parameters (path or header or query)."`
 
-## <a name="anyOf_i8"></a>9. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterFormat`
+## <a name="anyOf_i8"></a>9. Property `EOAP Problem Details Registry > anyOf > InvalidRequestHeaderFormat`
 
-|                           |                                       |
-| ------------------------- | ------------------------------------- |
-| **Type**                  | `combining`                           |
-| **Required**              | No                                    |
-| **Additional properties** | Any type allowed                      |
-| **Defined in**            | #/$defs/InvalidRequestParameterFormat |
+|                           |                                    |
+| ------------------------- | ---------------------------------- |
+| **Type**                  | `combining`                        |
+| **Required**              | No                                 |
+| **Additional properties** | Any type allowed                   |
+| **Defined in**            | #/$defs/InvalidRequestHeaderFormat |
 
 | All of(Requirement)                  |
 | ------------------------------------ |
@@ -1081,8 +1089,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request contains a malformed query or path parameter.
-Your client issued a request that contained a malformed query or path parameter. Please review your request parameters and compare against the shared API definition.
+**Description:** This problem occurs when the request contains a malformed request header.
+Your client issued a request that contained a malformed request header. Please review your request parameters and compare against the shared API definition when applicable.
 
 | Property                               | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | -------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1101,7 +1109,7 @@ Your client issued a request that contained a malformed query or path parameter.
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/invalid-request-parameter-format"`
+Specific value: `"https://eoap.github.io/problems-registry/invalid-request-header-format"`
 
 #### <a name="anyOf_i8_allOf_i1_status"></a>9.2.2. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1 > status`
 
@@ -1124,7 +1132,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Invalid Request Parameter Format"`
+Specific value: `"Invalid Request Header Format"`
 
 #### <a name="anyOf_i8_allOf_i1_detail"></a>9.2.4. Property `EOAP Problem Details Registry > anyOf > item 8 > allOf > item 1 > detail`
 
@@ -1135,16 +1143,16 @@ Specific value: `"Invalid Request Parameter Format"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request contains a malformed request query parameter."`
+Specific value: `"The request contains a malformed request header parameter."`
 
-## <a name="anyOf_i9"></a>10. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterValue`
+## <a name="anyOf_i9"></a>10. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterFormat`
 
-|                           |                                      |
-| ------------------------- | ------------------------------------ |
-| **Type**                  | `combining`                          |
-| **Required**              | No                                   |
-| **Additional properties** | Any type allowed                     |
-| **Defined in**            | #/$defs/InvalidRequestParameterValue |
+|                           |                                       |
+| ------------------------- | ------------------------------------- |
+| **Type**                  | `combining`                           |
+| **Required**              | No                                    |
+| **Additional properties** | Any type allowed                      |
+| **Defined in**            | #/$defs/InvalidRequestParameterFormat |
 
 | All of(Requirement)                  |
 | ------------------------------------ |
@@ -1172,8 +1180,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request contains a invalid query or path parameter value.
-Your client issued a request that contained an invalid query or path parameter value. Please review your request and compare against the shared API definition where applicable.
+**Description:** This problem occurs when the request contains a malformed query or path parameter.
+Your client issued a request that contained a malformed query or path parameter. Please review your request parameters and compare against the shared API definition.
 
 | Property                               | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | -------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1192,7 +1200,7 @@ Your client issued a request that contained an invalid query or path parameter v
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/invalid-request-parameter-value"`
+Specific value: `"https://eoap.github.io/problems-registry/invalid-request-parameter-format"`
 
 #### <a name="anyOf_i9_allOf_i1_status"></a>10.2.2. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1 > status`
 
@@ -1215,7 +1223,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Invalid Request Parameter Value"`
+Specific value: `"Invalid Request Parameter Format"`
 
 #### <a name="anyOf_i9_allOf_i1_detail"></a>10.2.4. Property `EOAP Problem Details Registry > anyOf > item 9 > allOf > item 1 > detail`
 
@@ -1226,16 +1234,16 @@ Specific value: `"Invalid Request Parameter Value"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request body contains an invalid request parameter value."`
+Specific value: `"The request contains a malformed request query parameter."`
 
-## <a name="anyOf_i10"></a>11. Property `EOAP Problem Details Registry > anyOf > LicenseCancelled`
+## <a name="anyOf_i10"></a>11. Property `EOAP Problem Details Registry > anyOf > InvalidRequestParameterValue`
 
-|                           |                          |
-| ------------------------- | ------------------------ |
-| **Type**                  | `combining`              |
-| **Required**              | No                       |
-| **Additional properties** | Any type allowed         |
-| **Defined in**            | #/$defs/LicenseCancelled |
+|                           |                                      |
+| ------------------------- | ------------------------------------ |
+| **Type**                  | `combining`                          |
+| **Required**              | No                                   |
+| **Additional properties** | Any type allowed                     |
+| **Defined in**            | #/$defs/InvalidRequestParameterValue |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1263,8 +1271,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the license associated with the client has been cancelled thus rendering the service unavailable.
-The license associated with your client/organization has been cancelled. Please contact your account manager or representative.
+**Description:** This problem occurs when the request contains a invalid query or path parameter value.
+Your client issued a request that contained an invalid query or path parameter value. Please review your request and compare against the shared API definition where applicable.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1283,7 +1291,7 @@ The license associated with your client/organization has been cancelled. Please 
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/license-cancelled"`
+Specific value: `"https://eoap.github.io/problems-registry/invalid-request-parameter-value"`
 
 #### <a name="anyOf_i10_allOf_i1_status"></a>11.2.2. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > status`
 
@@ -1295,7 +1303,7 @@ Specific value: `"https://eoap.github.io/problems-registry/license-cancelled"`
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `503`
+Specific value: `400`
 
 #### <a name="anyOf_i10_allOf_i1_title"></a>11.2.3. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > title`
 
@@ -1306,7 +1314,7 @@ Specific value: `503`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"License Cancelled"`
+Specific value: `"Invalid Request Parameter Value"`
 
 #### <a name="anyOf_i10_allOf_i1_detail"></a>11.2.4. Property `EOAP Problem Details Registry > anyOf > item 10 > allOf > item 1 > detail`
 
@@ -1317,16 +1325,16 @@ Specific value: `"License Cancelled"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The service is unavailable as the license associated with your client or organization has been cancelled. Please contact your account manager or representative."`
+Specific value: `"The request body contains an invalid request parameter value."`
 
-## <a name="anyOf_i11"></a>12. Property `EOAP Problem Details Registry > anyOf > LicenseExpired`
+## <a name="anyOf_i11"></a>12. Property `EOAP Problem Details Registry > anyOf > LicenseCancelled`
 
-|                           |                        |
-| ------------------------- | ---------------------- |
-| **Type**                  | `combining`            |
-| **Required**              | No                     |
-| **Additional properties** | Any type allowed       |
-| **Defined in**            | #/$defs/LicenseExpired |
+|                           |                          |
+| ------------------------- | ------------------------ |
+| **Type**                  | `combining`              |
+| **Required**              | No                       |
+| **Additional properties** | Any type allowed         |
+| **Defined in**            | #/$defs/LicenseCancelled |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1354,8 +1362,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the license associated with the client has expired thus rendering the service unavailable.
-The license associated with your client/organization has expired. Please contact your account manager or representative.
+**Description:** This problem occurs when the license associated with the client has been cancelled thus rendering the service unavailable.
+The license associated with your client/organization has been cancelled. Please contact your account manager or representative.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1374,7 +1382,7 @@ The license associated with your client/organization has expired. Please contact
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/license-expired"`
+Specific value: `"https://eoap.github.io/problems-registry/license-cancelled"`
 
 #### <a name="anyOf_i11_allOf_i1_status"></a>12.2.2. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1 > status`
 
@@ -1397,7 +1405,7 @@ Specific value: `503`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"License Expired"`
+Specific value: `"License Cancelled"`
 
 #### <a name="anyOf_i11_allOf_i1_detail"></a>12.2.4. Property `EOAP Problem Details Registry > anyOf > item 11 > allOf > item 1 > detail`
 
@@ -1408,16 +1416,16 @@ Specific value: `"License Expired"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The service is unavailable as the license associated with your client or organization has expired. Please contact your account manager or representative."`
+Specific value: `"The service is unavailable as the license associated with your client or organization has been cancelled. Please contact your account manager or representative."`
 
-## <a name="anyOf_i12"></a>13. Property `EOAP Problem Details Registry > anyOf > MissingBodyProperty`
+## <a name="anyOf_i12"></a>13. Property `EOAP Problem Details Registry > anyOf > LicenseExpired`
 
-|                           |                             |
-| ------------------------- | --------------------------- |
-| **Type**                  | `combining`                 |
-| **Required**              | No                          |
-| **Additional properties** | Any type allowed            |
-| **Defined in**            | #/$defs/MissingBodyProperty |
+|                           |                        |
+| ------------------------- | ---------------------- |
+| **Type**                  | `combining`            |
+| **Required**              | No                     |
+| **Additional properties** | Any type allowed       |
+| **Defined in**            | #/$defs/LicenseExpired |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1445,8 +1453,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request sent to the API is missing an expected body property.
-Your client issued a request that omitted an expected body property.
+**Description:** This problem occurs when the license associated with the client has expired thus rendering the service unavailable.
+The license associated with your client/organization has expired. Please contact your account manager or representative.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1465,7 +1473,7 @@ Your client issued a request that omitted an expected body property.
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/missing-body-property"`
+Specific value: `"https://eoap.github.io/problems-registry/license-expired"`
 
 #### <a name="anyOf_i12_allOf_i1_status"></a>13.2.2. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > status`
 
@@ -1477,7 +1485,7 @@ Specific value: `"https://eoap.github.io/problems-registry/missing-body-property
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `400`
+Specific value: `503`
 
 #### <a name="anyOf_i12_allOf_i1_title"></a>13.2.3. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > title`
 
@@ -1488,7 +1496,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Missing body property"`
+Specific value: `"License Expired"`
 
 #### <a name="anyOf_i12_allOf_i1_detail"></a>13.2.4. Property `EOAP Problem Details Registry > anyOf > item 12 > allOf > item 1 > detail`
 
@@ -1499,16 +1507,16 @@ Specific value: `"Missing body property"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request is missing an expected body property."`
+Specific value: `"The service is unavailable as the license associated with your client or organization has expired. Please contact your account manager or representative."`
 
-## <a name="anyOf_i13"></a>14. Property `EOAP Problem Details Registry > anyOf > MissingRequestHeader`
+## <a name="anyOf_i13"></a>14. Property `EOAP Problem Details Registry > anyOf > MissingBodyProperty`
 
-|                           |                              |
-| ------------------------- | ---------------------------- |
-| **Type**                  | `combining`                  |
-| **Required**              | No                           |
-| **Additional properties** | Any type allowed             |
-| **Defined in**            | #/$defs/MissingRequestHeader |
+|                           |                             |
+| ------------------------- | --------------------------- |
+| **Type**                  | `combining`                 |
+| **Required**              | No                          |
+| **Additional properties** | Any type allowed            |
+| **Defined in**            | #/$defs/MissingBodyProperty |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1536,8 +1544,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request sent to the API is missing an expected request header.
-Your client issued a request that omitted an expected request header.
+**Description:** This problem occurs when the request sent to the API is missing an expected body property.
+Your client issued a request that omitted an expected body property.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1556,7 +1564,7 @@ Your client issued a request that omitted an expected request header.
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/missing-request-header"`
+Specific value: `"https://eoap.github.io/problems-registry/missing-body-property"`
 
 #### <a name="anyOf_i13_allOf_i1_status"></a>14.2.2. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1 > status`
 
@@ -1579,7 +1587,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Missing request header"`
+Specific value: `"Missing body property"`
 
 #### <a name="anyOf_i13_allOf_i1_detail"></a>14.2.4. Property `EOAP Problem Details Registry > anyOf > item 13 > allOf > item 1 > detail`
 
@@ -1590,16 +1598,16 @@ Specific value: `"Missing request header"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request is missing an expected HTTP request header."`
+Specific value: `"The request is missing an expected body property."`
 
-## <a name="anyOf_i14"></a>15. Property `EOAP Problem Details Registry > anyOf > MissingRequestParameter`
+## <a name="anyOf_i14"></a>15. Property `EOAP Problem Details Registry > anyOf > MissingRequestHeader`
 
-|                           |                                 |
-| ------------------------- | ------------------------------- |
-| **Type**                  | `combining`                     |
-| **Required**              | No                              |
-| **Additional properties** | Any type allowed                |
-| **Defined in**            | #/$defs/MissingRequestParameter |
+|                           |                              |
+| ------------------------- | ---------------------------- |
+| **Type**                  | `combining`                  |
+| **Required**              | No                           |
+| **Additional properties** | Any type allowed             |
+| **Defined in**            | #/$defs/MissingRequestHeader |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1627,8 +1635,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request sent to the API is missing an query or path parameter.
-Your client issued a request that omitted an expected query or path par.
+**Description:** This problem occurs when the request sent to the API is missing an expected request header.
+Your client issued a request that omitted an expected request header.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1647,7 +1655,7 @@ Your client issued a request that omitted an expected query or path par.
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/missing-request-parameter"`
+Specific value: `"https://eoap.github.io/problems-registry/missing-request-header"`
 
 #### <a name="anyOf_i14_allOf_i1_status"></a>15.2.2. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1 > status`
 
@@ -1670,7 +1678,7 @@ Specific value: `400`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Missing request parameter"`
+Specific value: `"Missing request header"`
 
 #### <a name="anyOf_i14_allOf_i1_detail"></a>15.2.4. Property `EOAP Problem Details Registry > anyOf > item 14 > allOf > item 1 > detail`
 
@@ -1681,16 +1689,16 @@ Specific value: `"Missing request parameter"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The request is missing an expected query or path parameter."`
+Specific value: `"The request is missing an expected HTTP request header."`
 
-## <a name="anyOf_i15"></a>16. Property `EOAP Problem Details Registry > anyOf > NotFound`
+## <a name="anyOf_i15"></a>16. Property `EOAP Problem Details Registry > anyOf > MissingRequestParameter`
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| **Type**                  | `combining`      |
-| **Required**              | No               |
-| **Additional properties** | Any type allowed |
-| **Defined in**            | #/$defs/NotFound |
+|                           |                                 |
+| ------------------------- | ------------------------------- |
+| **Type**                  | `combining`                     |
+| **Required**              | No                              |
+| **Additional properties** | Any type allowed                |
+| **Defined in**            | #/$defs/MissingRequestParameter |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1718,8 +1726,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the requested resource could not be found.
-Your client application tried to access a resource that does not exist (or could not be found).
+**Description:** This problem occurs when the request sent to the API is missing an query or path parameter.
+Your client issued a request that omitted an expected query or path par.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1738,7 +1746,7 @@ Your client application tried to access a resource that does not exist (or could
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/not-found"`
+Specific value: `"https://eoap.github.io/problems-registry/missing-request-parameter"`
 
 #### <a name="anyOf_i15_allOf_i1_status"></a>16.2.2. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > status`
 
@@ -1750,7 +1758,7 @@ Specific value: `"https://eoap.github.io/problems-registry/not-found"`
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `404`
+Specific value: `400`
 
 #### <a name="anyOf_i15_allOf_i1_title"></a>16.2.3. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > title`
 
@@ -1761,7 +1769,7 @@ Specific value: `404`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Not Found"`
+Specific value: `"Missing request parameter"`
 
 #### <a name="anyOf_i15_allOf_i1_detail"></a>16.2.4. Property `EOAP Problem Details Registry > anyOf > item 15 > allOf > item 1 > detail`
 
@@ -1772,16 +1780,16 @@ Specific value: `"Not Found"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The requested resource was not found."`
+Specific value: `"The request is missing an expected query or path parameter."`
 
-## <a name="anyOf_i16"></a>17. Property `EOAP Problem Details Registry > anyOf > ServerError`
+## <a name="anyOf_i16"></a>17. Property `EOAP Problem Details Registry > anyOf > NotFound`
 
-|                           |                     |
-| ------------------------- | ------------------- |
-| **Type**                  | `combining`         |
-| **Required**              | No                  |
-| **Additional properties** | Any type allowed    |
-| **Defined in**            | #/$defs/ServerError |
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `combining`      |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+| **Defined in**            | #/$defs/NotFound |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1809,8 +1817,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the server encounters an unexpected condition that prevents it from fulfilling the request.
-Your client application did everything correct. Unfortunately our API encountered a condition that resulted in this problem.
+**Description:** This problem occurs when the requested resource could not be found.
+Your client application tried to access a resource that does not exist (or could not be found).
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1829,7 +1837,7 @@ Your client application did everything correct. Unfortunately our API encountere
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/server-error"`
+Specific value: `"https://eoap.github.io/problems-registry/not-found"`
 
 #### <a name="anyOf_i16_allOf_i1_status"></a>17.2.2. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > status`
 
@@ -1841,7 +1849,7 @@ Specific value: `"https://eoap.github.io/problems-registry/server-error"`
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `500`
+Specific value: `404`
 
 #### <a name="anyOf_i16_allOf_i1_title"></a>17.2.3. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > title`
 
@@ -1852,7 +1860,7 @@ Specific value: `500`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Server Error"`
+Specific value: `"Not Found"`
 
 #### <a name="anyOf_i16_allOf_i1_detail"></a>17.2.4. Property `EOAP Problem Details Registry > anyOf > item 16 > allOf > item 1 > detail`
 
@@ -1863,16 +1871,16 @@ Specific value: `"Server Error"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The server encountered an unexpected error."`
+Specific value: `"The requested resource was not found."`
 
-## <a name="anyOf_i17"></a>18. Property `EOAP Problem Details Registry > anyOf > ServiceUnavailable`
+## <a name="anyOf_i17"></a>18. Property `EOAP Problem Details Registry > anyOf > ServerError`
 
-|                           |                            |
-| ------------------------- | -------------------------- |
-| **Type**                  | `combining`                |
-| **Required**              | No                         |
-| **Additional properties** | Any type allowed           |
-| **Defined in**            | #/$defs/ServiceUnavailable |
+|                           |                     |
+| ------------------------- | ------------------- |
+| **Type**                  | `combining`         |
+| **Required**              | No                  |
+| **Additional properties** | Any type allowed    |
+| **Defined in**            | #/$defs/ServerError |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1900,8 +1908,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the service requested is currently unavailable and the server is not ready to handle the request.
-Your client application did everything correct. Unfortunately our API is currently unavailable.
+**Description:** This problem occurs when the server encounters an unexpected condition that prevents it from fulfilling the request.
+Your client application did everything correct. Unfortunately our API encountered a condition that resulted in this problem.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1920,7 +1928,7 @@ Your client application did everything correct. Unfortunately our API is current
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/service-unavailable"`
+Specific value: `"https://eoap.github.io/problems-registry/server-error"`
 
 #### <a name="anyOf_i17_allOf_i1_status"></a>18.2.2. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > status`
 
@@ -1932,7 +1940,7 @@ Specific value: `"https://eoap.github.io/problems-registry/service-unavailable"`
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `503`
+Specific value: `500`
 
 #### <a name="anyOf_i17_allOf_i1_title"></a>18.2.3. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > title`
 
@@ -1943,7 +1951,7 @@ Specific value: `503`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Service Unavailable"`
+Specific value: `"Server Error"`
 
 #### <a name="anyOf_i17_allOf_i1_detail"></a>18.2.4. Property `EOAP Problem Details Registry > anyOf > item 17 > allOf > item 1 > detail`
 
@@ -1954,16 +1962,16 @@ Specific value: `"Service Unavailable"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"The service is currently unavailable."`
+Specific value: `"The server encountered an unexpected error."`
 
-## <a name="anyOf_i18"></a>19. Property `EOAP Problem Details Registry > anyOf > Unauthorized`
+## <a name="anyOf_i18"></a>19. Property `EOAP Problem Details Registry > anyOf > ServiceUnavailable`
 
-|                           |                      |
-| ------------------------- | -------------------- |
-| **Type**                  | `combining`          |
-| **Required**              | No                   |
-| **Additional properties** | Any type allowed     |
-| **Defined in**            | #/$defs/Unauthorized |
+|                           |                            |
+| ------------------------- | -------------------------- |
+| **Type**                  | `combining`                |
+| **Required**              | No                         |
+| **Additional properties** | Any type allowed           |
+| **Defined in**            | #/$defs/ServiceUnavailable |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -1991,8 +1999,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the requested resource could not be returned as the client request lacked valid authentication credentials.
-Your client application issued a requested to a protected resource without supplying the required auth details.
+**Description:** This problem occurs when the service requested is currently unavailable and the server is not ready to handle the request.
+Your client application did everything correct. Unfortunately our API is currently unavailable.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2011,7 +2019,7 @@ Your client application issued a requested to a protected resource without suppl
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/unauthorized"`
+Specific value: `"https://eoap.github.io/problems-registry/service-unavailable"`
 
 #### <a name="anyOf_i18_allOf_i1_status"></a>19.2.2. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > status`
 
@@ -2023,7 +2031,7 @@ Specific value: `"https://eoap.github.io/problems-registry/unauthorized"`
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `401`
+Specific value: `503`
 
 #### <a name="anyOf_i18_allOf_i1_title"></a>19.2.3. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > title`
 
@@ -2034,7 +2042,7 @@ Specific value: `401`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Unauthorized"`
+Specific value: `"Service Unavailable"`
 
 #### <a name="anyOf_i18_allOf_i1_detail"></a>19.2.4. Property `EOAP Problem Details Registry > anyOf > item 18 > allOf > item 1 > detail`
 
@@ -2045,16 +2053,16 @@ Specific value: `"Unauthorized"`
 
 **Description:** A human-readable explanation specific to this occurrence of the problem.
 
-Specific value: `"Access token not set or invalid, and the requested resource could not be returned."`
+Specific value: `"The service is currently unavailable."`
 
-## <a name="anyOf_i19"></a>20. Property `EOAP Problem Details Registry > anyOf > ValidationError`
+## <a name="anyOf_i19"></a>20. Property `EOAP Problem Details Registry > anyOf > Unauthorized`
 
-|                           |                         |
-| ------------------------- | ----------------------- |
-| **Type**                  | `combining`             |
-| **Required**              | No                      |
-| **Additional properties** | Any type allowed        |
-| **Defined in**            | #/$defs/ValidationError |
+|                           |                      |
+| ------------------------- | -------------------- |
+| **Type**                  | `combining`          |
+| **Required**              | No                   |
+| **Additional properties** | Any type allowed     |
+| **Defined in**            | #/$defs/Unauthorized |
 
 | All of(Requirement)                   |
 | ------------------------------------- |
@@ -2082,9 +2090,8 @@ The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Regist
 | **Required**              | No               |
 | **Additional properties** | Any type allowed |
 
-**Description:** This problem occurs when the request is deemed unprocessable.
-Your client issued a request that failed validation. Certain validation libraries return multi-errors and cannot be easily parsed into discreet types. This problem type, afforded the provider with the ability to surface all validation errors and negate the need for a trial and error workflow on your side. 
-Please review your request to determine if you can remain within appropriate business rules. Consider validating your request against available metadata (e.g. schemas) prior to sending to the server.
+**Description:** This problem occurs when the requested resource could not be returned as the client request lacked valid authentication credentials.
+Your client application issued a requested to a protected resource without supplying the required auth details.
 
 | Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
 | --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2103,7 +2110,7 @@ Please review your request to determine if you can remain within appropriate bus
 
 **Description:** A URI reference that identifies the problem type.
 
-Specific value: `"https://eoap.github.io/problems-registry/validation-error"`
+Specific value: `"https://eoap.github.io/problems-registry/unauthorized"`
 
 #### <a name="anyOf_i19_allOf_i1_status"></a>20.2.2. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > status`
 
@@ -2115,7 +2122,7 @@ Specific value: `"https://eoap.github.io/problems-registry/validation-error"`
 
 **Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
 
-Specific value: `422`
+Specific value: `401`
 
 #### <a name="anyOf_i19_allOf_i1_title"></a>20.2.3. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > title`
 
@@ -2126,9 +2133,101 @@ Specific value: `422`
 
 **Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
 
-Specific value: `"Validation Error"`
+Specific value: `"Unauthorized"`
 
 #### <a name="anyOf_i19_allOf_i1_detail"></a>20.2.4. Property `EOAP Problem Details Registry > anyOf > item 19 > allOf > item 1 > detail`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `const` |
+| **Required** | Yes     |
+
+**Description:** A human-readable explanation specific to this occurrence of the problem.
+
+Specific value: `"Access token not set or invalid, and the requested resource could not be returned."`
+
+## <a name="anyOf_i20"></a>21. Property `EOAP Problem Details Registry > anyOf > ValidationError`
+
+|                           |                         |
+| ------------------------- | ----------------------- |
+| **Type**                  | `combining`             |
+| **Required**              | No                      |
+| **Additional properties** | Any type allowed        |
+| **Defined in**            | #/$defs/ValidationError |
+
+| All of(Requirement)                   |
+| ------------------------------------- |
+| [ProblemDetails](#anyOf_i20_allOf_i0) |
+| [item 1](#anyOf_i20_allOf_i1)         |
+
+### <a name="anyOf_i20_allOf_i0"></a>21.1. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > ProblemDetails`
+
+|                           |                                         |
+| ------------------------- | --------------------------------------- |
+| **Type**                  | `object`                                |
+| **Required**              | No                                      |
+| **Additional properties** | Any type allowed                        |
+| **Same definition as**    | [anyOf_i0_allOf_i0](#anyOf_i0_allOf_i0) |
+
+**Description:** The `ProblemDetails` object provides detailed information about an errors that occurred during an API call execution. This problem object conforms to the [RFC9457](https://www.rfc-editor.org/info/rfc9457) (formerly [RFC7807](https://tools.ietf.org/html/rfc7807)).
+The object is extended with the following properties: - `code` - a string identifier to aid the provider team better understand the error - `errors` - and array of errors providing contextual information on the root cause of the problem
+The `ProblemDetails` referenced by this domain utilize the [EOAP Problems Registry](https://eoap.github.io/problems-registry/).
+
+### <a name="anyOf_i20_allOf_i1"></a>21.2. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1`
+
+|                           |                  |
+| ------------------------- | ---------------- |
+| **Type**                  | `object`         |
+| **Required**              | No               |
+| **Additional properties** | Any type allowed |
+
+**Description:** This problem occurs when the request is deemed unprocessable.
+Your client issued a request that failed validation. Certain validation libraries return multi-errors and cannot be easily parsed into discreet types. This problem type, afforded the provider with the ability to surface all validation errors and negate the need for a trial and error workflow on your side. 
+Please review your request to determine if you can remain within appropriate business rules. Consider validating your request against available metadata (e.g. schemas) prior to sending to the server.
+
+| Property                                | Pattern | Type  | Deprecated | Definition | Title/Description                                                                                                                                            |
+| --------------------------------------- | ------- | ----- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| + [type](#anyOf_i20_allOf_i1_type )     | No      | const | No         | -          | A URI reference that identifies the problem type.                                                                                                            |
+| + [status](#anyOf_i20_allOf_i1_status ) | No      | const | No         | -          | The HTTP status code generated by the origin server for this occurrence of the problem.                                                                      |
+| + [title](#anyOf_i20_allOf_i1_title )   | No      | const | No         | -          | A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization. |
+| + [detail](#anyOf_i20_allOf_i1_detail ) | No      | const | No         | -          | A human-readable explanation specific to this occurrence of the problem.                                                                                     |
+
+#### <a name="anyOf_i20_allOf_i1_type"></a>21.2.1. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > type`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `const` |
+| **Required** | Yes     |
+| **Format**   | `uri`   |
+
+**Description:** A URI reference that identifies the problem type.
+
+Specific value: `"https://eoap.github.io/problems-registry/validation-error"`
+
+#### <a name="anyOf_i20_allOf_i1_status"></a>21.2.2. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > status`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `const` |
+| **Required** | Yes     |
+| **Format**   | `int32` |
+
+**Description:** The HTTP status code generated by the origin server for this occurrence of the problem.
+
+Specific value: `422`
+
+#### <a name="anyOf_i20_allOf_i1_title"></a>21.2.3. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > title`
+
+|              |         |
+| ------------ | ------- |
+| **Type**     | `const` |
+| **Required** | Yes     |
+
+**Description:** A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+
+Specific value: `"Validation Error"`
+
+#### <a name="anyOf_i20_allOf_i1_detail"></a>21.2.4. Property `EOAP Problem Details Registry > anyOf > item 20 > allOf > item 1 > detail`
 
 |              |         |
 | ------------ | ------- |
@@ -2140,4 +2239,4 @@ Specific value: `"Validation Error"`
 Specific value: `"The request is not valid."`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-07-20 at 17:11:41 +0200
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-07-23 at 16:54:04 +0200

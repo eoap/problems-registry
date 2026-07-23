@@ -24,6 +24,7 @@ PROBLEM_MODEL_NAMES = {
     "BadRequest",
     "BusinessRuleViolation",
     "Forbidden",
+    "Gone",
     "InvalidBodyPropertyFormat",
     "InvalidBodyPropertyValue",
     "InvalidParameters",
@@ -109,6 +110,20 @@ class ProblemDetailsModelsTest(unittest.TestCase):
             registry.MissingBodyProperty(status=422)
 
         self.assertEqual(captured.exception.errors()[0]["loc"], ("status",))
+
+    def test_gone_model_uses_registered_problem_fields(self):
+        self.assertEqual(
+            registry.Gone().model_dump(mode="json", exclude_none=True),
+            {
+                "type": "https://eoap.github.io/problems-registry/gone",
+                "status": 410,
+                "title": "Gone",
+                "detail": (
+                    "The requested resource is no longer available and is "
+                    "unlikely to be available again."
+                ),
+            },
+        )
 
 
 if __name__ == "__main__":
