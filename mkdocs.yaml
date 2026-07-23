@@ -89,6 +89,7 @@ nav:
     - validation-error.md
   - Common Problem Types:
     - bad-request.md
+    - gone.md
     - forbidden.md
     - invalid-parameters.md
     - not-found.md

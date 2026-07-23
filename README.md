@@ -23,30 +23,32 @@ EOAP-specific problem types:
 | Problem type | HTTP status |
 | --- | --- |
 | Already Exists | 409 |
+| Business Rule Violation | 422 |
+| Invalid Body Property Format | 400 |
+| Invalid Body Property Value | 400 |
+| Invalid Request Header Format | 400 |
+| Invalid Request Parameter Format | 400 |
+| Invalid Request Parameter Value | 400 |
+| Invalid State Transition | 422 |
 | Missing Body Property | 400 |
 | Missing Request Header | 400 |
 | Missing Request Parameter | 400 |
-| Invalid Body Property Format | 400 |
-| Invalid Request Parameter Format | 400 |
-| Invalid Request Header Format | 400 |
-| Invalid Body Property Value | 400 |
-| Invalid Request Parameter Value | 400 |
-| Validation Error | 422 |
-| Business Rule Violation | 422 |
 | License Expired | 503 |
 | License Cancelled | 503 |
+| Validation Error | 422 |
 
 Common convenience problem types:
 
 | Problem type | HTTP status |
 | --- | --- |
 | Bad Request | 400 |
-| Unauthorized | 401 |
 | Forbidden | 403 |
-| Not Found | 404 |
+| Gone | 410 |
 | Invalid Parameters | 400 |
+| Not Found | 404 |
 | Server Error | 500 |
 | Service Unavailable | 503 |
+| Unauthorized | 401 |
 
 For generic/common HTTP problem types, prefer the [IANA HTTP Problem Types registry](https://www.iana.org/assignments/http-problem-types/http-problem-types.xhtml) when it fits your use case.
 
