@@ -7,19 +7,19 @@ This registry acts as a well-known location for problem detail types returned by
 | Problem type | Description |
 |--------------|-------------|
 | [Already Exists](already-exists.md) | The request attempted to create a resource that already exists. |
+| [Business Rule Violation](business-rule-violation.md) | The request is deemed invalid as it failed business rule checks. |
+| [Invalid Body Property Format](invalid-body-property-format.md) | One or more of the body properties was malformed. |
+| [Invalid Body Property Value](invalid-body-property-value.md) | One or more of the body property values are invalid. |
+| [Invalid Request Header Format](invalid-request-header-format.md) | One or more of the request headers was malformed. |
+| [Invalid Request Parameter Format](invalid-request-parameter-format.md) | One or more of the query or path parameters was malformed. |
+| [Invalid Request Parameter Value](invalid-request-parameter-value.md) | One or more of the query or path parameter values are invalid. |
+| [Invalid State Transition](invalid-state-transition.md) | The requested transition is not valid for the current item status. |
 | [Missing Body Property](missing-body-property.md) | The request is missing an expected body property. |
 | [Missing Request Header](missing-request-header.md) | The request lacked an expected header. |
 | [Missing Request Parameter](missing-request-parameter.md) | The request is missing a query or path parameter. |
-| [Invalid Body Property Format](invalid-body-property-format.md) | One or more of the body properties was malformed. |
-| [Invalid Request Parameter Format](invalid-request-parameter-format.md) | One or more of the query or path parameters was malformed. |
-| [Invalid Request Header Format](invalid-request-header-format.md) | One or more of the request headers was malformed. |
-| [Invalid Body Property Value](invalid-body-property-value.md) | One or more of the body property values are invalid. |
-| [Invalid Request Parameter Value](invalid-request-parameter-value.md) | One or more of the query or path parameter values are invalid. |
-| [Invalid State Transition](invalid-state-transition.md) | The requested transition is not valid for the current item status. |
-| [Validation Error](validation-error.md) | The request is invalid and deemed unprocessable. |
-| [Business Rule Violation](business-rule-violation.md) | The request is deemed invalid as it failed business rule checks. |
-| [License Expired](license-expired.md) | The client license has expired, rendering the service unavailable. |
 | [License Cancelled](license-cancelled.md) | The client license has been cancelled, rendering the service unavailable. |
+| [License Expired](license-expired.md) | The client license has expired, rendering the service unavailable. |
+| [Validation Error](validation-error.md) | The request is invalid and deemed unprocessable. |
 
 ## Common Problem Types
 
