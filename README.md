@@ -41,14 +41,23 @@ Common convenience problem types:
 
 | Problem type | HTTP status |
 | --- | --- |
-| Bad Request | 400 |
-| Forbidden | 403 |
-| Gone | 410 |
-| Invalid Parameters | 400 |
-| Not Found | 404 |
-| Server Error | 500 |
-| Service Unavailable | 503 |
-| Unauthorized | 401 |
+| [Bad Request](docs/bad-request.md) | 400 |
+| [Conflict](docs/conflict.md) | 409 |
+| [Failed Dependency](docs/failed-dependency.md) | 424 |
+| [Forbidden](docs/forbidden.md) | 403 |
+| [Gone](docs/gone.md) | 410 |
+| [Insufficient Storage](docs/insufficient-storage.md) | 507 |
+| [Invalid Parameters](docs/invalid-parameters.md) | 400 |
+| [Method Not Allowed](docs/method-not-allowed.md) | 405 |
+| [Not Acceptable](docs/not-acceptable.md) | 406 |
+| [Not Found](docs/not-found.md) | 404 |
+| [Not Implemented](docs/not-implemented.md) | 501 |
+| [Request Timeout](docs/request-timeout.md) | 408 |
+| [Server Error](docs/server-error.md) | 500 |
+| [Service Unavailable](docs/service-unavailable.md) | 503 |
+| [Unauthorized](docs/unauthorized.md) | 401 |
+| [Unavailable For Legal Reasons](docs/unavailable-for-legal-reasons.md) | 451 |
+| [Unprocessable Content](docs/unprocessable-content.md) | 422 |
 
 For generic/common HTTP problem types, prefer the [IANA HTTP Problem Types registry](https://www.iana.org/assignments/http-problem-types/http-problem-types.xhtml) when it fits your use case.
 

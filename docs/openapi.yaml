@@ -158,6 +158,87 @@ components:
           examples:
             missingRequestParameterWithErrors:
               $ref: '#/components/examples/missing-request-parameter-with-errors'
+    Conflict:
+      description: The request conflicts with the current state of the target resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Conflict'
+          examples:
+            conflict:
+              $ref: '#/components/examples/conflict'
+    FailedDependency:
+      description: The requested action failed because an action on which it depended failed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/FailedDependency'
+          examples:
+            failedDependency:
+              $ref: '#/components/examples/failed-dependency'
+    InsufficientStorage:
+      description: The server has insufficient storage to complete the requested action.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/InsufficientStorage'
+          examples:
+            insufficientStorage:
+              $ref: '#/components/examples/insufficient-storage'
+    MethodNotAllowed:
+      description: The request method is not supported by the target resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/MethodNotAllowed'
+          examples:
+            methodNotAllowed:
+              $ref: '#/components/examples/method-not-allowed'
+    NotAcceptable:
+      description: No acceptable representation is available for the requested resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/NotAcceptable'
+          examples:
+            notAcceptable:
+              $ref: '#/components/examples/not-acceptable'
+    NotImplemented:
+      description: The server does not support the functionality required to fulfill the request.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/NotImplemented'
+          examples:
+            notImplemented:
+              $ref: '#/components/examples/not-implemented'
+    RequestTimeout:
+      description: The server timed out while waiting to receive the request.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/RequestTimeout'
+          examples:
+            requestTimeout:
+              $ref: '#/components/examples/request-timeout'
+    UnavailableForLegalReasons:
+      description: The requested resource is unavailable due to legal reasons.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/UnavailableForLegalReasons'
+          examples:
+            unavailableForLegalReasons:
+              $ref: '#/components/examples/unavailable-for-legal-reasons'
+    UnprocessableContent:
+      description: The request content is syntactically correct but cannot be processed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/UnprocessableContent'
+          examples:
+            unprocessableContent:
+              $ref: '#/components/examples/unprocessable-content'
     Unauthorized:
       description: Access token is not set or invalid.
       content:
@@ -413,6 +494,60 @@ components:
         errors:
           - detail: The value `top-down` is not a valid sort parameter value. The expected string values are `ASC` or `DSC`
             parameter: sort
+    conflict:
+      value:
+        type: https://eoap.github.io/problems-registry/conflict
+        title: Conflict
+        detail: The request conflicts with the current state of the target resource.
+        status: 409
+    failed-dependency:
+      value:
+        type: https://eoap.github.io/problems-registry/failed-dependency
+        title: Failed Dependency
+        detail: The requested action failed because an action on which it depended failed.
+        status: 424
+    insufficient-storage:
+      value:
+        type: https://eoap.github.io/problems-registry/insufficient-storage
+        title: Insufficient Storage
+        detail: The server has insufficient storage to complete the requested action.
+        status: 507
+    method-not-allowed:
+      value:
+        type: https://eoap.github.io/problems-registry/method-not-allowed
+        title: Method Not Allowed
+        detail: The request method is not supported by the target resource.
+        status: 405
+    not-acceptable:
+      value:
+        type: https://eoap.github.io/problems-registry/not-acceptable
+        title: Not Acceptable
+        detail: No acceptable representation is available for the requested resource.
+        status: 406
+    not-implemented:
+      value:
+        type: https://eoap.github.io/problems-registry/not-implemented
+        title: Not Implemented
+        detail: The server does not support the functionality required to fulfill the request.
+        status: 501
+    request-timeout:
+      value:
+        type: https://eoap.github.io/problems-registry/request-timeout
+        title: Request Timeout
+        detail: The server timed out while waiting to receive the request.
+        status: 408
+    unavailable-for-legal-reasons:
+      value:
+        type: https://eoap.github.io/problems-registry/unavailable-for-legal-reasons
+        title: Unavailable For Legal Reasons
+        detail: The requested resource is unavailable due to legal reasons.
+        status: 451
+    unprocessable-content:
+      value:
+        type: https://eoap.github.io/problems-registry/unprocessable-content
+        title: Unprocessable Content
+        detail: The request content is syntactically correct but cannot be processed.
+        status: 422
     unauthorized:
       value:
         type: https://eoap.github.io/problems-registry/unauthorized
@@ -874,6 +1009,285 @@ components:
               type: string
               description: A human-readable explanation specific to this occurrence of the problem.
               const: The request is missing an expected query or path parameter.
+    Conflict:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The request conflicts with the current state of the target resource.
+            Your client application should resolve the conflict before resubmitting the request.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/conflict
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 409
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Conflict
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The request conflicts with the current state of the target resource.
+    FailedDependency:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The requested action could not be performed because an action on which it depended failed.
+            Your client application should resolve the failed prerequisite before retrying the request.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/failed-dependency
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 424
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Failed Dependency
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The requested action failed because an action on which it depended failed.
+    InsufficientStorage:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The server cannot complete the requested action because it has insufficient storage.
+            Your client application may retry the request after the server's storage becomes available.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/insufficient-storage
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 507
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Insufficient Storage
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The server has insufficient storage to complete the requested action.
+    MethodNotAllowed:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The server knows the request method, but the target resource does not support it.
+            Your client application should use one of the methods listed in the response's Allow header.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/method-not-allowed
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 405
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Method Not Allowed
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The request method is not supported by the target resource.
+    NotAcceptable:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The server cannot produce a response matching the acceptable values in the request's content negotiation headers.
+            Your client application should request one of the representations supported by the server.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/not-acceptable
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 406
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Not Acceptable
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: No acceptable representation is available for the requested resource.
+    NotImplemented:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The server does not support the functionality required to fulfill the request.
+            Your client application may retry after the functionality is implemented.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/not-implemented
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 501
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Not Implemented
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The server does not support the functionality required to fulfill the request.
+    RequestTimeout:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The server timed out while waiting to receive the request.
+            Your client application may repeat the request using a new connection.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/request-timeout
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 408
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Request Timeout
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The server timed out while waiting to receive the request.
+    UnavailableForLegalReasons:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The requested resource is unavailable because of a legal demand or restriction.
+            Your client application cannot access the resource while the legal restriction applies.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/unavailable-for-legal-reasons
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 451
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Unavailable For Legal Reasons
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The requested resource is unavailable due to legal reasons.
+    UnprocessableContent:
+      allOf:
+        - $ref: '#/components/schemas/ProblemDetails'
+        - type: object
+          description: |-
+            The server understood the request content type and syntax but could not process the contained instructions.
+            Your client application should modify the request before resubmitting it.
+          required:
+            - type
+            - status
+            - title
+            - detail
+          properties:
+            type:
+              type: string
+              description: A URI reference that identifies the problem type.
+              format: uri
+              const: https://eoap.github.io/problems-registry/unprocessable-content
+            status:
+              type: integer
+              description: The HTTP status code generated by the origin server for this occurrence of the problem.
+              format: int32
+              const: 422
+            title:
+              type: string
+              description: A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
+              const: Unprocessable Content
+            detail:
+              type: string
+              description: A human-readable explanation specific to this occurrence of the problem.
+              const: The request content is syntactically correct but cannot be processed.
     Unauthorized:
       allOf:
         - $ref: '#/components/schemas/ProblemDetails'
