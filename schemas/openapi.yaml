@@ -270,14 +270,32 @@ components:
               $ref: '#/components/examples/unavailable-for-legal-reasons'
 
     UnprocessableContent:
-      description: The request content is syntactically correct but cannot be processed.
+      description: |
+        The request content was syntactically correct but could not be processed.
+
+        `Unprocessable Content` problem detail responses:
+
+         - [The request content cannot be processed](https://eoap.github.io/problems-registry/unprocessable-content/)
+         - [Business rule violation](https://eoap.github.io/problems-registry/business-rule-violation/)
+         - [Invalid state transition](https://eoap.github.io/problems-registry/invalid-state-transition/)
+         - [Validation error](https://eoap.github.io/problems-registry/validation-error/)
       content:
         application/problem+json:
           schema:
-            $ref: 'schema.yaml#/$defs/UnprocessableContent'
+            oneOf:
+            - $ref: 'schema.yaml#/$defs/UnprocessableContent'
+            - $ref: 'schema.yaml#/$defs/BusinessRuleViolation'
+            - $ref: 'schema.yaml#/$defs/InvalidStateTransition'
+            - $ref: 'schema.yaml#/$defs/ValidationError'
           examples:
             unprocessableContent:
               $ref: '#/components/examples/unprocessable-content'
+            businessRuleViolation:
+              $ref: '#/components/examples/business-rule-violation'
+            invalidStateTransition:
+              $ref: '#/components/examples/invalid-state-transition'
+            validationError:
+              $ref: '#/components/examples/validation-error'
 
     Unauthorized:
       description: Access token is not set or invalid.
