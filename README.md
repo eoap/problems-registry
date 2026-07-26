@@ -111,7 +111,7 @@ The resulting payload includes the registered `type`, `status`, `title`, and `de
 
 ### FastAPI Integration
 
-The optional FastAPI integration requires Python 3.10 or newer. Install it with the `fastapi` extra:
+The optional [FastAPI](https://fastapi.tiangolo.com/) integration requires Python 3.10 or newer. Install it with the `fastapi` extra:
 
 ```bash
 pip install "eoap-problems-registry[fastapi]"
