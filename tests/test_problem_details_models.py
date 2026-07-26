@@ -18,7 +18,6 @@ from pydantic import ValidationError as PydanticValidationError
 
 import eoap_problems_registry as registry
 
-
 PROBLEM_MODEL_NAMES = {
     "AlreadyExists",
     "BadRequest",

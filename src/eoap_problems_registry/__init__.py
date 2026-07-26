@@ -17,9 +17,10 @@
 #   timestamp: 2026-07-26T13:18:17+00:00
 
 from __future__ import annotations
-from pydantic import BaseModel
+
 from typing import Annotated, Literal
-from pydantic import ConfigDict, Field, RootModel
+
+from pydantic import BaseModel, ConfigDict, Field, RootModel
 
 
 class ErrorDetail(BaseModel):
