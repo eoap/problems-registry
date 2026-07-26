@@ -28,13 +28,22 @@ The following types can also be leveraged for convenience; however, the recommen
 | Problem type | Description |
 |--------------|-------------|
 | [Bad Request](bad-request.md) | The client request is invalid or malformed. |
+| [Conflict](conflict.md) | The request conflicts with the current state of the target resource. |
+| [Failed Dependency](failed-dependency.md) | The requested action depends on another action that failed. |
 | [Forbidden](forbidden.md) | The request is not authorized for the resource. |
 | [Gone](gone.md) | The requested resource is no longer available and the condition is likely permanent. |
+| [Insufficient Storage](insufficient-storage.md) | The server lacks enough storage to complete the requested action. |
 | [Invalid Parameters](invalid-parameters.md) | One or more of the parameters was malformed. |
+| [Method Not Allowed](method-not-allowed.md) | The target resource does not support the request method. |
+| [Not Acceptable](not-acceptable.md) | No representation matches the request's content negotiation preferences. |
 | [Not Found](not-found.md) | The requested resource could not be found. |
-| [Service Unavailable](service-unavailable.md) | The requested service is currently unavailable. |
+| [Not Implemented](not-implemented.md) | The server does not support the functionality required by the request. |
+| [Request Timeout](request-timeout.md) | The server timed out while waiting to receive the request. |
 | [Server Error](server-error.md) | The server encountered an unexpected error. |
+| [Service Unavailable](service-unavailable.md) | The requested service is currently unavailable. |
 | [Unauthorized](unauthorized.md) | The client request missed or malformed its credentials. |
+| [Unavailable For Legal Reasons](unavailable-for-legal-reasons.md) | The requested resource is unavailable because of a legal restriction. |
+| [Unprocessable Content](unprocessable-content.md) | The request is syntactically correct but cannot be processed. |
 
 When necessary, a Problem Detail response *MAY* include additional detail on the problems that have occurred. The additional errors **MUST** be under the `errors` collection, which itself follows the JSON Schema defined in our [GitHub repo](https://github.com/eoap/problems-registry).
 
@@ -60,7 +69,6 @@ problem = registry.MissingRequestParameter(
             parameter="limit",
         )
     ],
-    correlation_id="req-123",
 )
 
 payload = problem.model_dump(mode="json", exclude_none=True)
@@ -82,8 +90,35 @@ The resulting payload includes the registered `type`, `status`, `title`, and `de
   "status": 400,
   "title": "Missing request parameter",
   "detail": "The request is missing an expected query or path parameter.",
-  "correlation_id": "req-123"
 }
 ```
 
 `ProblemDetails` and `ErrorDetail` allow additional provider-specific fields, while generated problem classes use Pydantic literal fields to protect the registered `type`, `status`, `title`, and `detail` values.
+
+### FastAPI Integration
+
+The optional [FastAPI](https://fastapi.tiangolo.com/) integration requires Python 3.10 or newer. Install it with the `fastapi` extra:
+
+```bash
+pip install "eoap-problems-registry[fastapi]"
+```
+
+Register an exception handler that returns the problem detail as the response body, then raise `ProblemRegistryException` from a route:
+
+```python
+from fastapi import FastAPI
+
+import eoap_problems_registry as registry
+from eoap_problems_registry.fastapi import ProblemRegistryException
+
+app = FastAPI()
+
+
+@app.get("/resources/{resource_id}")
+async def get_resource(resource_id: str) -> dict[str, str]:
+    raise ProblemRegistryException(
+        problem=registry.NotFound(
+            instance=f"https://api.example.test/resources/{resource_id}",
+        )
+    )
+```

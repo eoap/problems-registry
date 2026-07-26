@@ -18,13 +18,15 @@ from pydantic import ValidationError as PydanticValidationError
 
 import eoap_problems_registry as registry
 
-
 PROBLEM_MODEL_NAMES = {
     "AlreadyExists",
     "BadRequest",
     "BusinessRuleViolation",
+    "Conflict",
+    "FailedDependency",
     "Forbidden",
     "Gone",
+    "InsufficientStorage",
     "InvalidBodyPropertyFormat",
     "InvalidBodyPropertyValue",
     "InvalidParameters",
@@ -37,11 +39,37 @@ PROBLEM_MODEL_NAMES = {
     "MissingBodyProperty",
     "MissingRequestHeader",
     "MissingRequestParameter",
+    "MethodNotAllowed",
+    "NotAcceptable",
     "NotFound",
+    "NotImplemented",
+    "RequestTimeout",
     "ServerError",
     "ServiceUnavailable",
     "Unauthorized",
+    "UnavailableForLegalReasons",
+    "UnprocessableContent",
     "ValidationError",
+}
+
+NEW_COMMON_PROBLEMS = {
+    "Conflict": ("conflict", 409, "Conflict"),
+    "FailedDependency": ("failed-dependency", 424, "Failed Dependency"),
+    "InsufficientStorage": ("insufficient-storage", 507, "Insufficient Storage"),
+    "MethodNotAllowed": ("method-not-allowed", 405, "Method Not Allowed"),
+    "NotAcceptable": ("not-acceptable", 406, "Not Acceptable"),
+    "NotImplemented": ("not-implemented", 501, "Not Implemented"),
+    "RequestTimeout": ("request-timeout", 408, "Request Timeout"),
+    "UnavailableForLegalReasons": (
+        "unavailable-for-legal-reasons",
+        451,
+        "Unavailable For Legal Reasons",
+    ),
+    "UnprocessableContent": (
+        "unprocessable-content",
+        422,
+        "Unprocessable Content",
+    ),
 }
 
 
@@ -69,6 +97,18 @@ class ProblemDetailsModelsTest(unittest.TestCase):
                 self.assertGreater(len(payload["title"]), 0)
                 self.assertIsInstance(payload["detail"], str)
                 self.assertGreater(len(payload["detail"]), 0)
+
+    def test_new_common_problem_models_use_registered_fields(self):
+        for model_name, (uri_suffix, status, title) in NEW_COMMON_PROBLEMS.items():
+            with self.subTest(model=model_name):
+                payload = getattr(registry, model_name)().model_dump(mode="json")
+
+                self.assertEqual(
+                    payload["type"],
+                    f"https://eoap.github.io/problems-registry/{uri_suffix}",
+                )
+                self.assertEqual(payload["status"], status)
+                self.assertEqual(payload["title"], title)
 
     def test_problem_model_serializes_context_errors_and_extension_fields(self):
         problem = registry.MissingRequestParameter(

@@ -30,6 +30,11 @@ dependencies = [
   "pydantic==2.13.4",
 ]
 
+[project.optional-dependencies]
+fastapi = [
+  "fastapi>=0.140.0"
+]
+
 [project.urls]
 Documentation = "https://eoap.github.io/problems-registry/"
 Issues = "https://github.com/eoap/problems-registry/issues"
@@ -67,6 +72,7 @@ exclude_lines = [
 
 [tool.hatch.envs.test]
 skip-install = false
+features = ["fastapi"]
 
 dependencies = []
 

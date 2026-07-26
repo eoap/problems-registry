@@ -189,6 +189,114 @@ components:
             missingRequestParameterWithErrors:
               $ref: '#/components/examples/missing-request-parameter-with-errors'
 
+    Conflict:
+      description: The request conflicts with the current state of the target resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/Conflict'
+          examples:
+            conflict:
+              $ref: '#/components/examples/conflict'
+
+    FailedDependency:
+      description: The requested action failed because an action on which it depended failed.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/FailedDependency'
+          examples:
+            failedDependency:
+              $ref: '#/components/examples/failed-dependency'
+
+    InsufficientStorage:
+      description: The server has insufficient storage to complete the requested action.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/InsufficientStorage'
+          examples:
+            insufficientStorage:
+              $ref: '#/components/examples/insufficient-storage'
+
+    MethodNotAllowed:
+      description: The request method is not supported by the target resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/MethodNotAllowed'
+          examples:
+            methodNotAllowed:
+              $ref: '#/components/examples/method-not-allowed'
+
+    NotAcceptable:
+      description: No acceptable representation is available for the requested resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/NotAcceptable'
+          examples:
+            notAcceptable:
+              $ref: '#/components/examples/not-acceptable'
+
+    NotImplemented:
+      description: The server does not support the functionality required to fulfill the request.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/NotImplemented'
+          examples:
+            notImplemented:
+              $ref: '#/components/examples/not-implemented'
+
+    RequestTimeout:
+      description: The server timed out while waiting to receive the request.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/RequestTimeout'
+          examples:
+            requestTimeout:
+              $ref: '#/components/examples/request-timeout'
+
+    UnavailableForLegalReasons:
+      description: The requested resource is unavailable due to legal reasons.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schema.yaml#/$defs/UnavailableForLegalReasons'
+          examples:
+            unavailableForLegalReasons:
+              $ref: '#/components/examples/unavailable-for-legal-reasons'
+
+    UnprocessableContent:
+      description: |
+        The request content was syntactically correct but could not be processed.
+
+        `Unprocessable Content` problem detail responses:
+
+         - [The request content cannot be processed](https://eoap.github.io/problems-registry/unprocessable-content/)
+         - [Business rule violation](https://eoap.github.io/problems-registry/business-rule-violation/)
+         - [Invalid state transition](https://eoap.github.io/problems-registry/invalid-state-transition/)
+         - [Validation error](https://eoap.github.io/problems-registry/validation-error/)
+      content:
+        application/problem+json:
+          schema:
+            oneOf:
+            - $ref: 'schema.yaml#/$defs/UnprocessableContent'
+            - $ref: 'schema.yaml#/$defs/BusinessRuleViolation'
+            - $ref: 'schema.yaml#/$defs/InvalidStateTransition'
+            - $ref: 'schema.yaml#/$defs/ValidationError'
+          examples:
+            unprocessableContent:
+              $ref: '#/components/examples/unprocessable-content'
+            businessRuleViolation:
+              $ref: '#/components/examples/business-rule-violation'
+            invalidStateTransition:
+              $ref: '#/components/examples/invalid-state-transition'
+            validationError:
+              $ref: '#/components/examples/validation-error'
+
     Unauthorized:
       description: Access token is not set or invalid.
       content:
@@ -520,6 +628,69 @@ components:
             The value `top-down` is not a valid sort parameter value. The
             expected string values are `ASC` or `DSC`
           parameter: sort
+
+    conflict:
+      value:
+        type: 'https://eoap.github.io/problems-registry/conflict'
+        title: Conflict
+        detail: The request conflicts with the current state of the target resource.
+        status: 409
+
+    failed-dependency:
+      value:
+        type: 'https://eoap.github.io/problems-registry/failed-dependency'
+        title: Failed Dependency
+        detail: The requested action failed because an action on which it depended failed.
+        status: 424
+
+    insufficient-storage:
+      value:
+        type: 'https://eoap.github.io/problems-registry/insufficient-storage'
+        title: Insufficient Storage
+        detail: The server has insufficient storage to complete the requested action.
+        status: 507
+
+    method-not-allowed:
+      value:
+        type: 'https://eoap.github.io/problems-registry/method-not-allowed'
+        title: Method Not Allowed
+        detail: The request method is not supported by the target resource.
+        status: 405
+
+    not-acceptable:
+      value:
+        type: 'https://eoap.github.io/problems-registry/not-acceptable'
+        title: Not Acceptable
+        detail: No acceptable representation is available for the requested resource.
+        status: 406
+
+    not-implemented:
+      value:
+        type: 'https://eoap.github.io/problems-registry/not-implemented'
+        title: Not Implemented
+        detail: The server does not support the functionality required to fulfill the request.
+        status: 501
+
+    request-timeout:
+      value:
+        type: 'https://eoap.github.io/problems-registry/request-timeout'
+        title: Request Timeout
+        detail: The server timed out while waiting to receive the request.
+        status: 408
+
+    unavailable-for-legal-reasons:
+      value:
+        type: 'https://eoap.github.io/problems-registry/unavailable-for-legal-reasons'
+        title: Unavailable For Legal Reasons
+        detail: The requested resource is unavailable due to legal reasons.
+        status: 451
+
+    unprocessable-content:
+      value:
+        type: 'https://eoap.github.io/problems-registry/unprocessable-content'
+        title: Unprocessable Content
+        detail: The request content is syntactically correct but cannot be processed.
+        status: 422
 
     unauthorized:
       value:

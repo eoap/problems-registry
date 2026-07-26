@@ -89,13 +89,22 @@ nav:
     - validation-error.md
   - Common Problem Types:
     - bad-request.md
-    - gone.md
+    - conflict.md
+    - failed-dependency.md
     - forbidden.md
+    - gone.md
+    - insufficient-storage.md
     - invalid-parameters.md
+    - method-not-allowed.md
+    - not-acceptable.md
     - not-found.md
-    - service-unavailable.md
+    - not-implemented.md
+    - request-timeout.md
     - server-error.md
+    - service-unavailable.md
     - unauthorized.md
+    - unavailable-for-legal-reasons.md
+    - unprocessable-content.md
 - Schemas:
   - JSON Schema: json-schema.md
   - OpenAPI: openapi.yaml
