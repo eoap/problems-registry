@@ -12,43 +12,45 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from . import *
 from fastapi import HTTPException
+
+from . import *
+
 
 class ProblemRegistryException(HTTPException):
     def __init__(
         self,
         *,
         problem: AlreadyExists
-                | BadRequest
-                | BusinessRuleViolation
-                | Conflict
-                | FailedDependency
-                | Forbidden
-                | Gone
-                | InsufficientStorage
-                | InvalidBodyPropertyFormat
-                | InvalidBodyPropertyValue
-                | InvalidParameters
-                | InvalidRequestHeaderFormat
-                | InvalidRequestParameterFormat
-                | InvalidRequestParameterValue
-                | LicenseCancelled
-                | LicenseExpired
-                | MissingBodyProperty
-                | MissingRequestHeader
-                | MissingRequestParameter
-                | MethodNotAllowed
-                | NotAcceptable
-                | NotFound
-                | NotImplemented
-                | RequestTimeout
-                | ServerError
-                | ServiceUnavailable
-                | Unauthorized
-                | UnavailableForLegalReasons
-                | UnprocessableContent
-                | ValidationError
+        | BadRequest
+        | BusinessRuleViolation
+        | Conflict
+        | FailedDependency
+        | Forbidden
+        | Gone
+        | InsufficientStorage
+        | InvalidBodyPropertyFormat
+        | InvalidBodyPropertyValue
+        | InvalidParameters
+        | InvalidRequestHeaderFormat
+        | InvalidRequestParameterFormat
+        | InvalidRequestParameterValue
+        | LicenseCancelled
+        | LicenseExpired
+        | MissingBodyProperty
+        | MissingRequestHeader
+        | MissingRequestParameter
+        | MethodNotAllowed
+        | NotAcceptable
+        | NotFound
+        | NotImplemented
+        | RequestTimeout
+        | ServerError
+        | ServiceUnavailable
+        | Unauthorized
+        | UnavailableForLegalReasons
+        | UnprocessableContent
+        | ValidationError,
     ) -> None:
         self.status_code = problem.status
         self.detail = problem.model_dump_json(exclude_none=True)
