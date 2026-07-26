@@ -19,6 +19,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+[1.2.0] - 2026-07-26
+
+### Added
+
+- New _Common Problem_ details and reponses:
+  - `405` Method Not Allowed
+  - `406` Not Acceptable
+  - `408` Request Timeout
+  - `409` Conflict
+  - `422` Unprocessable Content
+  - `424` Failed Dependency
+  - `451` Unavailable For Legal Reasons
+  - `501` Not Implemented
+  - `507` Insufficient
+- [FastAPI](https://fastapi.tiangolo.com/) integration.
+
 [1.1.0] - 2026-07-23
 
 ### Added
@@ -37,7 +53,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version
 
-[Unreleased]: https://github.com/eoap/problems-registry/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/eoap/problems-registry/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/eoap/problems-registry/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/eoap/problems-registry/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/eoap/problems-registry/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/eoap/problems-registry/releases/tag/v1.0.0
