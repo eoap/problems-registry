@@ -83,7 +83,6 @@ problem = registry.MissingRequestParameter(
             parameter="limit",
         )
     ],
-    correlation_id="req-123",
 )
 
 payload = problem.model_dump(mode="json", exclude_none=True)
@@ -105,11 +104,38 @@ The resulting payload includes the registered `type`, `status`, `title`, and `de
   "status": 400,
   "title": "Missing request parameter",
   "detail": "The request is missing an expected query or path parameter.",
-  "correlation_id": "req-123"
 }
 ```
 
 `ProblemDetails` and `ErrorDetail` allow additional provider-specific fields, while generated problem classes use Pydantic literal fields to protect the registered `type`, `status`, `title`, and `detail` values.
+
+### FastAPI Integration
+
+The optional FastAPI integration requires Python 3.10 or newer. Install it with the `fastapi` extra:
+
+```bash
+pip install "eoap-problems-registry[fastapi]"
+```
+
+Register an exception handler that returns the problem detail as the response body, then raise `ProblemRegistryException` from a route:
+
+```python
+from fastapi import FastAPI
+
+import eoap_problems_registry as registry
+from eoap_problems_registry.fastapi import ProblemRegistryException
+
+app = FastAPI()
+
+
+@app.get("/resources/{resource_id}")
+async def get_resource(resource_id: str) -> dict[str, str]:
+    raise ProblemRegistryException(
+        problem=registry.NotFound(
+            instance=f"https://api.example.test/resources/{resource_id}",
+        )
+    )
+```
 
 ## Schemas And OpenAPI
 
