@@ -3130,4 +3130,4 @@ Specific value: `"Validation Error"`
 Specific value: `"The request is not valid."`
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-07-24 at 18:33:28 +0200
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-07-26 at 15:18:33 +0200
