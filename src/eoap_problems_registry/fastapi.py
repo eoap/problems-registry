@@ -14,9 +14,43 @@
 
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from fastapi import HTTPException
 
-from . import *
+if TYPE_CHECKING:
+    from . import (
+        AlreadyExists,
+        BadRequest,
+        BusinessRuleViolation,
+        Conflict,
+        FailedDependency,
+        Forbidden,
+        Gone,
+        InsufficientStorage,
+        InvalidBodyPropertyFormat,
+        InvalidBodyPropertyValue,
+        InvalidParameters,
+        InvalidRequestHeaderFormat,
+        InvalidRequestParameterFormat,
+        InvalidRequestParameterValue,
+        LicenseCancelled,
+        LicenseExpired,
+        MethodNotAllowed,
+        MissingBodyProperty,
+        MissingRequestHeader,
+        MissingRequestParameter,
+        NotAcceptable,
+        NotFound,
+        NotImplemented,
+        RequestTimeout,
+        ServerError,
+        ServiceUnavailable,
+        Unauthorized,
+        UnavailableForLegalReasons,
+        UnprocessableContent,
+        ValidationError,
+    )
 
 
 class ProblemRegistryException(HTTPException):
