@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+[1.3.0] - 2026-07-30
+
+### Changed
+
+- Stronger code chekers with Ruff+McCabe & Bandit
+
 [1.2.0] - 2026-07-26
 
 ### Added
