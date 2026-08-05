@@ -88,6 +88,7 @@ class ProblemRegistryException(HTTPException):
         | UnprocessableContent
         | ValidationError,
         errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
     ) -> None:
         self.status_code = problem.status
 
@@ -98,159 +99,303 @@ class ProblemRegistryException(HTTPException):
                 problem.errors = [errors]
         self.detail = problem.model_dump_json(exclude_none=True)
 
-        self.headers = {"Content-Type": "application/problem+json"}
+        headers = (headers or {}).copy()
+        headers["Content-Type"] = "application/problem+json"
+        self.headers = headers
 
 
 class AlreadyExistsException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=AlreadyExists(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=AlreadyExists(), errors=errors, headers=headers)
 
 
 class BadRequestException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=BadRequest(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=BadRequest(), errors=errors, headers=headers)
 
 
 class BusinessRuleViolationException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=BusinessRuleViolation(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=BusinessRuleViolation(), errors=errors, headers=headers
+        )
 
 
 class ConflictException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=Conflict(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=Conflict(), errors=errors, headers=headers)
 
 
 class FailedDependencyException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=FailedDependency(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=FailedDependency(), errors=errors, headers=headers)
 
 
 class ForbiddenException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=Forbidden(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=Forbidden(), errors=errors, headers=headers)
 
 
 class GoneException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=Gone(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=Gone(), errors=errors, headers=headers)
 
 
 class InsufficientStorageException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InsufficientStorage(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=InsufficientStorage(), errors=errors, headers=headers)
 
 
 class InvalidBodyPropertyFormatException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidBodyPropertyFormat(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=InvalidBodyPropertyFormat(), errors=errors, headers=headers
+        )
 
 
 class InvalidBodyPropertyValueException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidBodyPropertyValue(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=InvalidBodyPropertyValue(), errors=errors, headers=headers
+        )
 
 
 class InvalidParametersException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidParameters(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=InvalidParameters(), errors=errors, headers=headers)
 
 
 class InvalidRequestHeaderFormatException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidRequestHeaderFormat(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=InvalidRequestHeaderFormat(), errors=errors, headers=headers
+        )
 
 
 class InvalidRequestParameterFormatException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidRequestParameterFormat(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=InvalidRequestParameterFormat(), errors=errors, headers=headers
+        )
 
 
 class InvalidRequestParameterValueException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidRequestParameterValue(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=InvalidRequestParameterValue(), errors=errors, headers=headers
+        )
 
 
 class InvalidStateTransitionException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=InvalidStateTransition(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=InvalidStateTransition(), errors=errors, headers=headers
+        )
 
 
 class LicenseCancelledException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=LicenseCancelled(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=LicenseCancelled(), errors=errors, headers=headers)
 
 
 class LicenseExpiredException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=LicenseExpired(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=LicenseExpired(), errors=errors, headers=headers)
 
 
 class MissingBodyPropertyException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=MissingBodyProperty(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=MissingBodyProperty(), errors=errors, headers=headers)
 
 
 class MissingRequestHeaderException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=MissingRequestHeader(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=MissingRequestHeader(), errors=errors, headers=headers)
 
 
 class MissingRequestParameterException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=MissingRequestParameter(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=MissingRequestParameter(), errors=errors, headers=headers
+        )
 
 
 class MethodNotAllowedException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=MethodNotAllowed(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=MethodNotAllowed(), errors=errors, headers=headers)
 
 
 class NotAcceptableException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=NotAcceptable(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=NotAcceptable(), errors=errors, headers=headers)
 
 
 class NotFoundException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=NotFound(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=NotFound(), errors=errors, headers=headers)
 
 
 class NotImplementedException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=NotImplemented(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=NotImplemented(), errors=errors, headers=headers)
 
 
 class RequestTimeoutException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=RequestTimeout(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=RequestTimeout(), errors=errors, headers=headers)
 
 
 class ServerErrorException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=ServerError(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=ServerError(), errors=errors, headers=headers)
 
 
 class ServiceUnavailableException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=ServiceUnavailable(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=ServiceUnavailable(), errors=errors, headers=headers)
 
 
 class UnauthorizedException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=Unauthorized(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=Unauthorized(), errors=errors, headers=headers)
 
 
 class UnavailableForLegalReasonsException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=UnavailableForLegalReasons(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(
+            problem=UnavailableForLegalReasons(), errors=errors, headers=headers
+        )
 
 
 class UnprocessableContentException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=UnprocessableContent(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=UnprocessableContent(), errors=errors, headers=headers)
 
 
 class ValidationErrorException(ProblemRegistryException):
-    def __init__(self, errors: ErrorDetail | list[ErrorDetail] | None = None) -> None:
-        super().__init__(problem=ValidationError(), errors=errors)
+    def __init__(
+        self,
+        errors: ErrorDetail | list[ErrorDetail] | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> None:
+        super().__init__(problem=ValidationError(), errors=errors, headers=headers)

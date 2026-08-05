@@ -129,6 +129,31 @@ class DeclaredProblemRegistryExceptionsTest(unittest.TestCase):
 
                 self.assertEqual(detail["errors"], expected_errors)
 
+    def test_each_declared_exception_merges_custom_headers(self):
+        headers = {
+            "X-Request-ID": "abc123",
+            "Content-Type": "text/plain",
+        }
+
+        for exception_type in self.exception_types:
+            with self.subTest(exception=exception_type.__name__):
+                exception = exception_type(headers=headers)
+
+                self.assertEqual(
+                    exception.headers,
+                    {
+                        "X-Request-ID": "abc123",
+                        "Content-Type": "application/problem+json",
+                    },
+                )
+                self.assertEqual(
+                    headers,
+                    {
+                        "X-Request-ID": "abc123",
+                        "Content-Type": "text/plain",
+                    },
+                )
+
 
 if __name__ == "__main__":
     unittest.main()
