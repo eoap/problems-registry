@@ -34,6 +34,7 @@ if TYPE_CHECKING:
         InvalidRequestHeaderFormat,
         InvalidRequestParameterFormat,
         InvalidRequestParameterValue,
+        InvalidStateTransition,
         LicenseCancelled,
         LicenseExpired,
         MethodNotAllowed,
@@ -71,6 +72,7 @@ class ProblemRegistryException(HTTPException):
         | InvalidRequestHeaderFormat
         | InvalidRequestParameterFormat
         | InvalidRequestParameterValue
+        | InvalidStateTransition
         | LicenseCancelled
         | LicenseExpired
         | MissingBodyProperty
