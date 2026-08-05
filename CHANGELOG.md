@@ -19,19 +19,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
-[1.4.0] - 2026-08-05
+[## 1.4.0] - 2026-08-05
 
 ### Fixed
 
 - `FastAPI` integration did not support the `InvalidStateTransition`.
 
-[1.3.0] - 2026-07-30
+## [1.3.0] - 2026-07-30
 
 ### Changed
 
 - Stronger code chekers with Ruff+McCabe & Bandit
 
-[1.2.0] - 2026-07-26
+## [1.2.0] - 2026-07-26
 
 ### Added
 
@@ -47,19 +47,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `507` Insufficient
 - [FastAPI](https://fastapi.tiangolo.com/) integration.
 
-[1.1.0] - 2026-07-23
+## [1.1.0] - 2026-07-23
 
 ### Added
 
 - `Gone` as new problem detail and reponse.
 
-[1.0.1] - 2026-07-20
+## [1.0.1] - 2026-07-20
 
 ### Fixed
 
 - Generated models solve Pydantic/Pylance [issue](https://github.com/pydantic/pydantic/discussions/7379)
 
-[1.0.0] - 2026-07-17
+## [1.0.0] - 2026-07-17
 
 ### Added
 
