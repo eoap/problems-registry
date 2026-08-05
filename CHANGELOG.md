@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Enhanced `FastAPI` integration with introducing facility exceptions to reduce boilerplate code.
+- Added `headers` support in `FastAPI` exceptions, when needing to send auxiliary HTTP headers i.e. `Retry-After`
 
 ## [1.4.0] - 2026-08-05
 
