@@ -15,6 +15,8 @@
 from __future__ import annotations
 
 from fastapi import HTTPException
+from fastapi.requests import Request
+from fastapi.responses import Response
 
 from . import (
     AlreadyExists,
@@ -50,6 +52,9 @@ from . import (
     UnprocessableContent,
     ValidationError,
 )
+
+
+_PROBLEM_JSON_CONTENT_TYPE_: str = "Content-Type"
 
 
 class ProblemRegistryException(HTTPException):
@@ -100,7 +105,7 @@ class ProblemRegistryException(HTTPException):
         self.detail = problem.model_dump_json(exclude_none=True)
 
         headers = (headers or {}).copy()
-        headers["Content-Type"] = "application/problem+json"
+        headers[_PROBLEM_JSON_CONTENT_TYPE_] = "application/problem+json"
         self.headers = headers
 
 
@@ -399,3 +404,15 @@ class ValidationErrorException(ProblemRegistryException):
         headers: dict[str, str] | None = None,
     ) -> None:
         super().__init__(problem=ValidationError(), errors=errors, headers=headers)
+
+
+async def problem_registry_exception_handler(
+    request: Request,
+    exc: ProblemRegistryException
+):
+    return Response(
+        status_code=exc.status_code,
+        content=exc.detail,
+        media_type=exc.headers[_PROBLEM_JSON_CONTENT_TYPE_],
+        headers=exc.headers,
+    )
