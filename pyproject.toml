@@ -153,6 +153,7 @@ xfail_strict = true
 [tool.hatch.envs.dev]
 skip-install = false
 dependencies = [
+  "fastapi>=0.141.1",
   "mypy>=2.3.1",
   "ruff>=0.16.9",
   "bandit>=1.9.4",
@@ -311,7 +312,6 @@ check = [
 # Preserve editable-install test extras and uv's local wheel resolution.
 [project.optional-dependencies]
 test = [
-  "fastapi>=0.141.1",
   "pytest>=9.1.1,<10",
   "pytest-cov>=7.1.0,<8"
 ]
