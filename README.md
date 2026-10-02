@@ -2,6 +2,8 @@
 
 [![PyPI - Version](https://img.shields.io/pypi/v/eoap-problems-registry.svg)](https://pypi.org/project/eoap-problems-registry)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/eoap-problems-registry.svg)](https://pypi.org/project/eoap-problems-registry)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Terradue/eoap-problems-registry/package.yaml?branch=develop&event=push&label=build&logo=githubactions)](https://github.com/Terradue/eoap-problems-registry/actions/workflows/package.yaml?query=branch%3Adevelop)
+[![Code coverage](https://img.shields.io/codecov/c/github/Terradue/eoap-problems-registry/develop?logo=codecov)](https://app.codecov.io/gh/Terradue/eoap-problems-registry/tree/develop)
 
 [EOAP Problems Registry](https://eoap.github.io/problems-registry/) is a shared registry of API problem detail types for EOAP services. The problem responses conform to [RFC 9457](https://www.rfc-editor.org/info/rfc9457), formerly [RFC 7807](https://www.rfc-editor.org/info/rfc7807), and are published as documentation, JSON Schema/OpenAPI artifacts, and a Python package with generated Pydantic models.
 

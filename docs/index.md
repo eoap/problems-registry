@@ -109,9 +109,13 @@ Register an exception handler that returns the problem detail as the response bo
 from fastapi import FastAPI
 
 import eoap_problems_registry as registry
-from eoap_problems_registry.fastapi import ProblemRegistryException
+from eoap_problems_registry.fastapi import (
+    ProblemRegistryException,
+    problem_registry_exception_handler,
+)
 
 app = FastAPI()
+app.add_exception_handler(ProblemRegistryException, problem_registry_exception_handler)
 
 
 @app.get("/resources/{resource_id}")
@@ -120,5 +124,20 @@ async def get_resource(resource_id: str) -> dict[str, str]:
         problem=registry.NotFound(
             instance=f"https://api.example.test/resources/{resource_id}",
         )
+    )
+```
+
+To avoid constructing and wrapping `registry.NotFound` each time, use the
+`NotFoundException` shortcut. With the same app and exception handler, replace
+the route above with:
+
+```python
+from eoap_problems_registry.fastapi import NotFoundException
+
+
+@app.get("/resources/{resource_id}")
+async def get_resource(resource_id: str) -> dict[str, str]:
+    raise NotFoundException(
+        instance=f"https://api.example.test/resources/{resource_id}",
     )
 ```

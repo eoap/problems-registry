@@ -28,7 +28,7 @@ from eoap_problems_registry.fastapi import ProblemRegistryException
 class ProblemRegistryExceptionTest(unittest.TestCase):
     def setUp(self) -> None:
         self.problem = registry.MissingRequestParameter(
-            instance="https://api.example.test/problems/abc123",
+            instance="/instances/sample",
             code="400-03",
             errors=[
                 registry.ErrorDetail(
@@ -59,7 +59,7 @@ class ProblemRegistryExceptionTest(unittest.TestCase):
 
     def test_handler_returns_problem_json_with_custom_headers(self) -> None:
         exception = fastapi_registry.MissingRequestParameterException(
-            headers={"X-Request-ID": "abc123"}
+            instance="/instances/sample", headers={"X-Request-ID": "abc123"}
         )
         response = asyncio.run(
             fastapi_registry.problem_registry_exception_handler(
@@ -67,6 +67,7 @@ class ProblemRegistryExceptionTest(unittest.TestCase):
             )
         )
 
+        self.assertEqual(json.loads(bytes(response.body))["instance"], "/instances/sample")
         self.assertEqual(response.status_code, exception.status_code)
         self.assertEqual(bytes(response.body).decode(), exception.detail)
         self.assertEqual(response.headers["content-type"], "application/problem+json")
@@ -124,8 +125,8 @@ class DeclaredProblemRegistryExceptionsTest(unittest.TestCase):
                 problem_model_name = exception_type.__name__.removesuffix("Exception")
                 problem_model_type = getattr(registry, problem_model_name)
 
-                problem = problem_model_type()
-                exception = exception_type()
+                problem = problem_model_type(instance="/instances/sample")
+                exception = exception_type(instance="/instances/sample")
 
                 self.assertIsInstance(exception, HTTPException)
                 self.assertEqual(exception.status_code, problem.status)
@@ -138,6 +139,16 @@ class DeclaredProblemRegistryExceptionsTest(unittest.TestCase):
                     {"Content-Type": "application/problem+json"},
                 )
 
+    def test_each_thrown_exception_preserves_instance(self) -> None:
+        instance = "/instances/sample"
+
+        for exception_type in self.exception_types:
+            with self.subTest(exception=exception_type.__name__):
+                with self.assertRaises(exception_type) as raised:
+                    raise exception_type(instance=instance)
+
+                self.assertEqual(json.loads(raised.exception.detail)["instance"], instance)
+
     def test_each_declared_exception_sets_a_single_error(self) -> None:
         error = registry.ErrorDetail(
             detail="The supplied value is invalid.",
@@ -147,9 +158,10 @@ class DeclaredProblemRegistryExceptionsTest(unittest.TestCase):
 
         for exception_type in self.exception_types:
             with self.subTest(exception=exception_type.__name__):
-                exception = exception_type(errors=error)
+                exception = exception_type(instance="/instances/sample", errors=error)
                 detail = json.loads(exception.detail)
 
+                self.assertEqual(detail["instance"], "/instances/sample")
                 self.assertEqual(detail["errors"], expected_errors)
 
     def test_each_declared_exception_sets_multiple_errors(self) -> None:
@@ -167,9 +179,10 @@ class DeclaredProblemRegistryExceptionsTest(unittest.TestCase):
 
         for exception_type in self.exception_types:
             with self.subTest(exception=exception_type.__name__):
-                exception = exception_type(errors=errors)
+                exception = exception_type(instance="/instances/sample", errors=errors)
                 detail = json.loads(exception.detail)
 
+                self.assertEqual(detail["instance"], "/instances/sample")
                 self.assertEqual(detail["errors"], expected_errors)
 
     def test_each_declared_exception_merges_custom_headers(self) -> None:
@@ -180,7 +193,9 @@ class DeclaredProblemRegistryExceptionsTest(unittest.TestCase):
 
         for exception_type in self.exception_types:
             with self.subTest(exception=exception_type.__name__):
-                exception = exception_type(headers=headers)
+                exception = exception_type(instance="/instances/sample", headers=headers)
+
+                self.assertEqual(json.loads(exception.detail)["instance"], "/instances/sample")
 
                 self.assertEqual(
                     exception.headers,
