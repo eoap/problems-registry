@@ -312,6 +312,7 @@ check = [
 # Preserve editable-install test extras and uv's local wheel resolution.
 [project.optional-dependencies]
 test = [
+  "fastapi>=0.141.1",
   "pytest>=9.1.1,<10",
   "pytest-cov>=7.1.0,<8"
 ]
