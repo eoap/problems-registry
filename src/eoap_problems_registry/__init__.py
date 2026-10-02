@@ -125,9 +125,7 @@ class BadRequest(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal["The request is invalid or malformed."] = (
-        "The request is invalid or malformed."
-    )
+    detail: Literal["The request is invalid or malformed."] = "The request is invalid or malformed."
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -138,9 +136,9 @@ class BusinessRuleViolation(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/business-rule-violation"] = (
         "https://eoap.github.io/problems-registry/business-rule-violation"
-    ] = "https://eoap.github.io/problems-registry/business-rule-violation"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -165,9 +163,9 @@ class InvalidStateTransition(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/invalid-state-transition"] = (
         "https://eoap.github.io/problems-registry/invalid-state-transition"
-    ] = "https://eoap.github.io/problems-registry/invalid-state-transition"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -179,9 +177,9 @@ class InvalidStateTransition(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal[
+    detail: Literal["The requested transition is not valid for the current item status."] = (
         "The requested transition is not valid for the current item status."
-    ] = "The requested transition is not valid for the current item status."
+    )
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -206,9 +204,9 @@ class Forbidden(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal[
+    detail: Literal["The resource could not be returned as the requestor is not authorized."] = (
         "The resource could not be returned as the requestor is not authorized."
-    ] = "The resource could not be returned as the requestor is not authorized."
+    )
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -260,9 +258,9 @@ class Conflict(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal[
+    detail: Literal["The request conflicts with the current state of the target resource."] = (
         "The request conflicts with the current state of the target resource."
-    ] = "The request conflicts with the current state of the target resource."
+    )
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -314,9 +312,9 @@ class InsufficientStorage(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal[
+    detail: Literal["The server has insufficient storage to complete the requested action."] = (
         "The server has insufficient storage to complete the requested action."
-    ] = "The server has insufficient storage to complete the requested action."
+    )
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -368,9 +366,9 @@ class NotAcceptable(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal[
+    detail: Literal["No acceptable representation is available for the requested resource."] = (
         "No acceptable representation is available for the requested resource."
-    ] = "No acceptable representation is available for the requested resource."
+    )
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -435,9 +433,9 @@ class UnavailableForLegalReasons(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/unavailable-for-legal-reasons"] = (
         "https://eoap.github.io/problems-registry/unavailable-for-legal-reasons"
-    ] = "https://eoap.github.io/problems-registry/unavailable-for-legal-reasons"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -476,9 +474,9 @@ class UnprocessableContent(ProblemDetails):
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
-    detail: Literal[
+    detail: Literal["The request content is syntactically correct but cannot be processed."] = (
         "The request content is syntactically correct but cannot be processed."
-    ] = "The request content is syntactically correct but cannot be processed."
+    )
     """
     A human-readable explanation specific to this occurrence of the problem.
     """
@@ -489,9 +487,9 @@ class InvalidBodyPropertyFormat(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/invalid-body-property-format"] = (
         "https://eoap.github.io/problems-registry/invalid-body-property-format"
-    ] = "https://eoap.github.io/problems-registry/invalid-body-property-format"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -516,9 +514,9 @@ class InvalidBodyPropertyValue(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/invalid-body-property-value"] = (
         "https://eoap.github.io/problems-registry/invalid-body-property-value"
-    ] = "https://eoap.github.io/problems-registry/invalid-body-property-value"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -570,9 +568,9 @@ class InvalidRequestHeaderFormat(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/invalid-request-header-format"] = (
         "https://eoap.github.io/problems-registry/invalid-request-header-format"
-    ] = "https://eoap.github.io/problems-registry/invalid-request-header-format"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -597,9 +595,9 @@ class InvalidRequestParameterFormat(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/invalid-request-parameter-format"] = (
         "https://eoap.github.io/problems-registry/invalid-request-parameter-format"
-    ] = "https://eoap.github.io/problems-registry/invalid-request-parameter-format"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -607,9 +605,7 @@ class InvalidRequestParameterFormat(ProblemDetails):
     """
     The HTTP status code generated by the origin server for this occurrence of the problem.
     """
-    title: Literal["Invalid Request Parameter Format"] = (
-        "Invalid Request Parameter Format"
-    )
+    title: Literal["Invalid Request Parameter Format"] = "Invalid Request Parameter Format"
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
@@ -626,9 +622,9 @@ class InvalidRequestParameterValue(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/invalid-request-parameter-value"] = (
         "https://eoap.github.io/problems-registry/invalid-request-parameter-value"
-    ] = "https://eoap.github.io/problems-registry/invalid-request-parameter-value"
+    )
     """
     A URI reference that identifies the problem type.
     """
@@ -636,9 +632,7 @@ class InvalidRequestParameterValue(ProblemDetails):
     """
     The HTTP status code generated by the origin server for this occurrence of the problem.
     """
-    title: Literal["Invalid Request Parameter Value"] = (
-        "Invalid Request Parameter Value"
-    )
+    title: Literal["Invalid Request Parameter Value"] = "Invalid Request Parameter Value"
     """
     A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.
     """
@@ -763,9 +757,9 @@ class MissingRequestParameter(ProblemDetails):
         extra="allow",
         populate_by_name=True,
     )
-    type: Literal[
+    type: Literal["https://eoap.github.io/problems-registry/missing-request-parameter"] = (
         "https://eoap.github.io/problems-registry/missing-request-parameter"
-    ] = "https://eoap.github.io/problems-registry/missing-request-parameter"
+    )
     """
     A URI reference that identifies the problem type.
     """

@@ -12,10 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Expose registry problems as FastAPI exceptions and HTTP responses."""
+
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from fastapi import HTTPException
-from fastapi.requests import Request
 from fastapi.responses import Response
 
 from . import (
@@ -52,6 +55,9 @@ from . import (
     UnprocessableContent,
     ValidationError,
 )
+
+if TYPE_CHECKING:
+    from fastapi.requests import Request
 
 
 _PROBLEM_JSON_CONTENT_TYPE_: str = "Content-Type"
@@ -133,9 +139,7 @@ class BusinessRuleViolationException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=BusinessRuleViolation(), errors=errors, headers=headers
-        )
+        super().__init__(problem=BusinessRuleViolation(), errors=errors, headers=headers)
 
 
 class ConflictException(ProblemRegistryException):
@@ -189,9 +193,7 @@ class InvalidBodyPropertyFormatException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=InvalidBodyPropertyFormat(), errors=errors, headers=headers
-        )
+        super().__init__(problem=InvalidBodyPropertyFormat(), errors=errors, headers=headers)
 
 
 class InvalidBodyPropertyValueException(ProblemRegistryException):
@@ -200,9 +202,7 @@ class InvalidBodyPropertyValueException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=InvalidBodyPropertyValue(), errors=errors, headers=headers
-        )
+        super().__init__(problem=InvalidBodyPropertyValue(), errors=errors, headers=headers)
 
 
 class InvalidParametersException(ProblemRegistryException):
@@ -220,9 +220,7 @@ class InvalidRequestHeaderFormatException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=InvalidRequestHeaderFormat(), errors=errors, headers=headers
-        )
+        super().__init__(problem=InvalidRequestHeaderFormat(), errors=errors, headers=headers)
 
 
 class InvalidRequestParameterFormatException(ProblemRegistryException):
@@ -231,9 +229,7 @@ class InvalidRequestParameterFormatException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=InvalidRequestParameterFormat(), errors=errors, headers=headers
-        )
+        super().__init__(problem=InvalidRequestParameterFormat(), errors=errors, headers=headers)
 
 
 class InvalidRequestParameterValueException(ProblemRegistryException):
@@ -242,9 +238,7 @@ class InvalidRequestParameterValueException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=InvalidRequestParameterValue(), errors=errors, headers=headers
-        )
+        super().__init__(problem=InvalidRequestParameterValue(), errors=errors, headers=headers)
 
 
 class InvalidStateTransitionException(ProblemRegistryException):
@@ -253,9 +247,7 @@ class InvalidStateTransitionException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=InvalidStateTransition(), errors=errors, headers=headers
-        )
+        super().__init__(problem=InvalidStateTransition(), errors=errors, headers=headers)
 
 
 class LicenseCancelledException(ProblemRegistryException):
@@ -300,9 +292,7 @@ class MissingRequestParameterException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=MissingRequestParameter(), errors=errors, headers=headers
-        )
+        super().__init__(problem=MissingRequestParameter(), errors=errors, headers=headers)
 
 
 class MethodNotAllowedException(ProblemRegistryException):
@@ -383,9 +373,7 @@ class UnavailableForLegalReasonsException(ProblemRegistryException):
         errors: ErrorDetail | list[ErrorDetail] | None = None,
         headers: dict[str, str] | None = None,
     ) -> None:
-        super().__init__(
-            problem=UnavailableForLegalReasons(), errors=errors, headers=headers
-        )
+        super().__init__(problem=UnavailableForLegalReasons(), errors=errors, headers=headers)
 
 
 class UnprocessableContentException(ProblemRegistryException):
@@ -408,11 +396,12 @@ class ValidationErrorException(ProblemRegistryException):
 
 async def problem_registry_exception_handler(
     request: Request,
-    exc: ProblemRegistryException
-):
+    exc: ProblemRegistryException,
+) -> Response:
+    """Return the serialized problem with its HTTP status and custom headers."""
     return Response(
         status_code=exc.status_code,
         content=exc.detail,
-        media_type=exc.headers[_PROBLEM_JSON_CONTENT_TYPE_],
+        media_type="application/problem+json",
         headers=exc.headers,
     )
