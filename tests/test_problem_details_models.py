@@ -74,7 +74,7 @@ NEW_COMMON_PROBLEMS = {
 
 
 class ProblemDetailsModelsTest(unittest.TestCase):
-    def test_all_registry_problem_models_have_default_problem_fields(self):
+    def test_all_registry_problem_models_have_default_problem_fields(self) -> None:
         problem_models = {
             model.__name__: model for model in registry.ProblemDetails.__subclasses__()
         }
@@ -86,9 +86,7 @@ class ProblemDetailsModelsTest(unittest.TestCase):
                 payload = model_type().model_dump(mode="json")
 
                 self.assertTrue(
-                    payload["type"].startswith(
-                        "https://eoap.github.io/problems-registry/"
-                    )
+                    payload["type"].startswith("https://eoap.github.io/problems-registry/")
                 )
                 self.assertIsInstance(payload["status"], int)
                 self.assertGreaterEqual(payload["status"], 400)
@@ -98,7 +96,7 @@ class ProblemDetailsModelsTest(unittest.TestCase):
                 self.assertIsInstance(payload["detail"], str)
                 self.assertGreater(len(payload["detail"]), 0)
 
-    def test_new_common_problem_models_use_registered_fields(self):
+    def test_new_common_problem_models_use_registered_fields(self) -> None:
         for model_name, (uri_suffix, status, title) in NEW_COMMON_PROBLEMS.items():
             with self.subTest(model=model_name):
                 payload = getattr(registry, model_name)().model_dump(mode="json")
@@ -110,18 +108,20 @@ class ProblemDetailsModelsTest(unittest.TestCase):
                 self.assertEqual(payload["status"], status)
                 self.assertEqual(payload["title"], title)
 
-    def test_problem_model_serializes_context_errors_and_extension_fields(self):
-        problem = registry.MissingRequestParameter(
-            instance="https://api.example.test/problems/abc123",
-            code="400-03",
-            errors=[
-                registry.ErrorDetail(
-                    detail="The query parameter limit is required.",
-                    parameter="limit",
-                    provider_hint="Use limit=100 or less.",
-                )
-            ],
-            correlation_id="req-123",
+    def test_problem_model_serializes_context_errors_and_extension_fields(self) -> None:
+        problem = registry.MissingRequestParameter.model_validate(
+            {
+                "instance": "https://api.example.test/problems/abc123",
+                "code": "400-03",
+                "errors": [
+                    {
+                        "detail": "The query parameter limit is required.",
+                        "parameter": "limit",
+                        "provider_hint": "Use limit=100 or less.",
+                    }
+                ],
+                "correlation_id": "req-123",
+            }
         )
 
         self.assertEqual(
@@ -136,8 +136,7 @@ class ProblemDetailsModelsTest(unittest.TestCase):
                         "provider_hint": "Use limit=100 or less.",
                     }
                 ],
-                "type": "https://eoap.github.io/problems-registry/"
-                "missing-request-parameter",
+                "type": "https://eoap.github.io/problems-registry/missing-request-parameter",
                 "status": 400,
                 "title": "Missing request parameter",
                 "detail": "The request is missing an expected query or path parameter.",
@@ -145,13 +144,13 @@ class ProblemDetailsModelsTest(unittest.TestCase):
             },
         )
 
-    def test_problem_model_rejects_changed_literal_fields(self):
+    def test_problem_model_rejects_changed_literal_fields(self) -> None:
         with self.assertRaises(PydanticValidationError) as captured:
-            registry.MissingBodyProperty(status=422)
+            registry.MissingBodyProperty.model_validate({"status": 422})
 
         self.assertEqual(captured.exception.errors()[0]["loc"], ("status",))
 
-    def test_gone_model_uses_registered_problem_fields(self):
+    def test_gone_model_uses_registered_problem_fields(self) -> None:
         self.assertEqual(
             registry.Gone().model_dump(mode="json", exclude_none=True),
             {

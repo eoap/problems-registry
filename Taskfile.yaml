@@ -41,11 +41,7 @@ tasks:
 
   default:
     cmds:
-    - task: process_schema
-    - task: generate_openapi_docs
-    - task: quality:lint
-    - task: quality:test
-    - task: quality:check
+    - task: quality:pre-commit:run
 
   serve_docs:
     desc: "Serve MkDocs site using hatch docs environment"

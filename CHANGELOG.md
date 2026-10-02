@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
 ### Changed
 
 ### Deprecated
@@ -18,6 +16,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+## [1.6.0] - 2026-10-02
+
+### Added
+
+- Added a Problem Registry exception handler to be reused in all context
+
+
+
+### Changed
+
+- Improved type annotations and internal code quality by addressing mypy, Ruff, and Bandit findings.
 
 ## [1.5.0] - 2026-08-05
 
@@ -72,7 +82,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version
 
-[Unreleased]: https://github.com/eoap/problems-registry/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/eoap/problems-registry/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/eoap/problems-registry/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/eoap/problems-registry/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/eoap/problems-registry/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/eoap/problems-registry/compare/v1.2.0...v1.3.0
